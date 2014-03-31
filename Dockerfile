@@ -1,1 +1,1 @@
-FROM stackbrew/registry:0.5.9
+FROM registry:0.6.5
