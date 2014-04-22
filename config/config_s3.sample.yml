@@ -1,0 +1,22 @@
+# Set env vars for AWS_* when launching - this config will refer to them.
+# To specify prod flavor, set the environment variable SETTINGS_FLAVOR=prod
+
+# example launching with this config, in a docker image:
+# docker run -p 5000:5000 -e SETTINGS_FLAVOR=prod -e AWS_KEY=X -e AWS_SECRET=Y -e AWS_BUCKET=images registry-image
+
+common:
+    loglevel: warn
+
+prod:
+    loglevel: warn
+    storage: s3
+    boto_bucket: resin-production-registry
+    s3_access_key: _env:AWS_KEY
+    s3_secret_key: _env:AWS_SECRET
+    s3_bucket: resin-production-registry
+    s3_encrypt: false
+    s3_secure: true
+    secret_key: SUPERSECRET_UNUSED_KEY
+    storage_path: /prod
+    storage_redirect: true  # Redirect signed URL for image files
+    #s3_region: us-east-1 #Set this in 0.6.8 onwards
