@@ -19,4 +19,3 @@ prod:
     secret_key: SUPERSECRET_UNUSED_KEY
     storage_path: /prod
     storage_redirect: true  # Redirect signed URL for image files
-    #s3_region: us-east-1 #Set this in 0.6.8 onwards
