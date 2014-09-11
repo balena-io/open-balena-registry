@@ -11,7 +11,7 @@ ADD ./nginx.conf /etc/nginx/sites-enabled/docker_registry
 
 ADD ./entry.sh /entry.sh
 
-EXPOSE 80
+EXPOSE 80 5000
 
 ENTRYPOINT ["/entry.sh"]
 
