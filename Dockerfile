@@ -1,4 +1,4 @@
-FROM registry:0.7.0
+FROM registry:0.8.0
 
 # Suppresses "debconf: unable to initialize frontend: Dialog" errors
 ENV DEBIAN_FRONTEND noninteractive
