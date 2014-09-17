@@ -10,12 +10,12 @@ common:
 prod:
     loglevel: warn
     storage: s3
-    boto_bucket: {{getv "registry_s3_bucket" }}
-    s3_access_key: {{getv "registry_s3_access_key" }}
-    s3_secret_key: {{getv "registry_s3_secret_key" }}
-    s3_bucket: {{getv "registry_s3_bucket" }}
+    boto_bucket: {{getv "/services/registry_s3_bucket" }}
+    s3_access_key: {{getv "/services/registry_s3_access_key" }}
+    s3_secret_key: {{getv "/services/registry_s3_secret_key" }}
+    s3_bucket: {{getv "/services/registry_s3_bucket" }}
     s3_encrypt: false
     s3_secure: true
-    secret_key: {{getv "registry_secret_key" }}
+    secret_key: {{getv "/services/registry_secret_key" }}
     storage_path: /prod
     storage_redirect: true  # Redirect signed URL for image files
