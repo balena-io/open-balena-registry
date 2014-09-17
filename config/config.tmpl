@@ -16,6 +16,6 @@ prod:
     s3_bucket: {{ .registry_s3_bucket }}
     s3_encrypt: false
     s3_secure: true
-    secret_key: {{ .registry_s3_secret_key }}
+    secret_key: {{ .registry_secret_key }}
     storage_path: /prod
     storage_redirect: true  # Redirect signed URL for image files
