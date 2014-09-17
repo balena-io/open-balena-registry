@@ -1,0 +1,9 @@
+[template]
+src = "config.tmpl"
+dest = "/config/config.yml"
+keys = [
+  "/registry_s3_bucket",
+  "/registry_s3_access_key",
+  "/registry_s3_secret_key",
+  "/registry_s3_secret_key"
+]

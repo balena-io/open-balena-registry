@@ -10,12 +10,12 @@ common:
 prod:
     loglevel: warn
     storage: s3
-    boto_bucket: resin-production-registry
-    s3_access_key: _env:AWS_KEY
-    s3_secret_key: _env:AWS_SECRET
-    s3_bucket: resin-production-registry
+    boto_bucket: {{ .registry_s3_bucket }}
+    s3_access_key: {{ .registry_s3_access_key }}
+    s3_secret_key: {{ .registry_s3_secret_key }}
+    s3_bucket: {{ .registry_s3_bucket }}
     s3_encrypt: false
     s3_secure: true
-    secret_key: SUPERSECRET_UNUSED_KEY
+    secret_key: {{ .registry_s3_secret_key }}
     storage_path: /prod
     storage_redirect: true  # Redirect signed URL for image files
