@@ -19,3 +19,5 @@ prod:
     secret_key: {{getv "/services/registry_secret_key" }}
     storage_path: /prod
     storage_redirect: true  # Redirect signed URL for image files
+    standalone: true
+    disable_token_auth: true
