@@ -17,7 +17,7 @@ prod:
     s3_encrypt: false
     s3_secure: true
     secret_key: {{getv "/services/registry_secret_key" }}
-    storage_path: /prod
+    storage_path: {{getv "/services/registry_storage_path" }}
     storage_redirect: true  # Redirect signed URL for image files
     standalone: true
     disable_token_auth: true
