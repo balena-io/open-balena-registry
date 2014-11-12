@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 # Use confd for generating the config
 # -- The host etcd needed for confd in coreos always runs on the ports below
