@@ -27,7 +27,7 @@ RUN pip install /usr/src/docker-registry/depends/docker-registry-core
 RUN pip install file:///usr/src/docker-registry#egg=docker-registry[bugsnag,newrelic,cors]
 
 RUN rm /etc/nginx/sites-enabled/default \
-	&& ln -s /usrc/src/app/nginx.conf /etc/nginx/sites-enabled/docker_registry \
+	&& ln -s /usr/src/app/nginx.conf /etc/nginx/sites-enabled/docker_registry \
 	&& ln -s /usr/src/app/docker-registry.yml /etc/docker-registry.yml
 
 RUN patch \
