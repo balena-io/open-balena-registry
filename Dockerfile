@@ -1,28 +1,41 @@
-FROM registry:0.9.0
+FROM resin/resin-base
 
-# Suppresses "debconf: unable to initialize frontend: Dialog" errors
-ENV DEBIAN_FRONTEND noninteractive
+EXPOSE 80
 
-RUN echo 'deb http://rep.logentries.com/ trusty main' > /etc/apt/sources.list.d/logentries.list \
-	&& gpg --keyserver pgp.mit.edu --recv-keys C43C79AD && gpg -a --export C43C79AD | apt-key add - \
-	&& apt-get -q update \
-	&& apt-get install -qy supervisor nginx wget logentries logentries-daemon \
-	&& apt-get clean && rm -rf /var/lib/apt/lists/* && rm /etc/nginx/sites-enabled/default
+RUN apt-get -q update \
+	&& apt-get install -y \
+		libevent-dev \
+		liblzma-dev \
+		libssl-dev \
+		nginx \
+		python-dev \
+		python-gevent \
+		python-pip \
+		swig \
+	&& rm -rf /var/lib/apt/lists/*
 
-RUN wget -O /usr/local/bin/confd https://github.com/kelseyhightower/confd/releases/download/v0.6.0-alpha3/confd-0.6.0-alpha3-linux-amd64 && chmod a+x /usr/local/bin/confd && mkdir -p /etc/confd/conf.d && mkdir -p /etc/confd/templates
-ADD ./config/config.toml /etc/confd/conf.d/config.toml
-ADD ./config/config.tmpl /etc/confd/templates/config.tmpl
-ADD ./config/env.toml /etc/confd/conf.d/env.toml
-ADD ./config/env.tmpl /etc/confd/templates/env.tmpl
-RUN mkdir /config /resin-log
+ENV REGISTRY_VERSION 0.9.1
+ENV REGISTRY_URL https://github.com/docker/docker-registry/archive/${REGISTRY_VERSION}.tar.gz
+RUN mkdir /usr/src/docker-registry \
+	&& curl -s -L $REGISTRY_URL | tar xz -C /usr/src/docker-registry --strip-components=1 \
+	&& ln -s /usr/src/docker-registry/config/boto.cfg /etc/boto.cfg
 
-ADD ./nginx.conf /etc/nginx/sites-enabled/docker_registry
-ADD resin-registry.conf /etc/supervisor/conf.d/resin-registry.conf
+# Install core
+RUN pip install /usr/src/docker-registry/depends/docker-registry-core
 
-ADD ./entry.sh /entry.sh
+# Install registry
+RUN pip install file:///usr/src/docker-registry#egg=docker-registry[bugsnag,newrelic,cors]
 
-EXPOSE 80 5000
+RUN rm /etc/nginx/sites-enabled/default \
+	&& ln -s /usrc/src/app/nginx.conf /etc/nginx/sites-enabled/docker_registry \
+	&& ln -s /usr/src/app/docker-registry.yml /etc/docker-registry.yml
 
-ENTRYPOINT ["/entry.sh"]
+RUN patch \
+	$(python -c 'import boto; import os; print os.path.dirname(boto.__file__)')/connection.py \
+	< /usr/src/docker-registry/contrib/boto_header_patch.diff
 
-CMD ["tail", "-f", "/var/log/supervisor/supervisord.log"]
+COPY . /usr/src/app
+
+COPY config/services/ /etc/systemd/system/
+
+RUN systemctl enable resin-registry.service
