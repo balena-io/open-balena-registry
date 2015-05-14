@@ -1,0 +1,27 @@
+common: &common
+    loglevel: warn
+    standalone: true
+    disable_token_auth: true
+
+prod:
+    <<: *common
+    storage: s3
+
+    boto_bucket: _env:REGIN_REGISTRY_S3_BUCKET
+
+    s3_access_key: _env:RESIN_REGISTRY_S3_KEY
+    s3_bucket: _env:RESIN_REGISTRY_S3_BUCKET
+    s3_secret_key: _env:RESIN_REGISTRY_S3_SECRET
+
+    s3_encrypt: false
+    s3_secure: true
+
+    secret_key: _env:RESIN_REGISTRY_SECRET_KEY
+
+    storage_path: _env:RESIN_REGISTRY_STORAGE_PATH
+    storage_redirect: true
+
+dev:
+    <<: *common
+    storage: local
+    storage_path: _env:RESIN_REGISTRY_STORAGE_PATH
