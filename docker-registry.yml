@@ -14,7 +14,7 @@ prod:
     s3_secret_key: _env:RESIN_REGISTRY_S3_SECRET
 
     s3_encrypt: false
-    s3_secure: true
+    s3_secure: false
 
     secret_key: _env:RESIN_REGISTRY_SECRET_KEY
 
