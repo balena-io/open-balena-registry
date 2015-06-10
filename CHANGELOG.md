@@ -1,3 +1,7 @@
+# 2015-06-10
+
+* Use authentication for pushes [petrosagg]
+
 # 2015-09-21
 
 * Fix production config [Petros]
