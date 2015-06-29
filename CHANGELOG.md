@@ -1,3 +1,7 @@
+# 2015-06-29
+
+* Changed to support newer resin-base with confd 0.10.0 [Page]
+
 # 2015-06-10
 
 * Use authentication for pushes [petrosagg]
