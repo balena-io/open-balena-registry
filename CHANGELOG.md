@@ -1,3 +1,7 @@
+# 2015-07-29
+
+* Switched logentries to TLS. [Petros]
+
 # 2015-06-29
 
 * Changed to support newer resin-base with confd 0.10.0 [Page]
