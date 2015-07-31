@@ -1,3 +1,5 @@
+* Switched to using a tagged version of resin-base. [Page]
+
 # 2015-07-29
 
 * Switched logentries to TLS. [Petros]
