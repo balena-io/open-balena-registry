@@ -10,6 +10,7 @@ Before=nginx.service
 WorkingDirectory=/usr/src/app
 EnvironmentFile=/usr/src/app/config/env
 ExecStart=/usr/local/bin/docker-registry
+Restart=always
 
 [Install]
 WantedBy=basic.target
