@@ -1,3 +1,6 @@
+# 2015-08-18
+
+* Always restart the service if it exits. [Aleksis]
 * Try to populate the docker cache before building. [Page]
 * Switched to using a tagged version of resin-base. [Page]
 
