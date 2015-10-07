@@ -9,6 +9,15 @@ prod:
 
     boto_bucket: _env:REGIN_REGISTRY_S3_BUCKET
 
+    cache:
+        host: 127.0.0.1
+        port: 6379
+        db: 0
+    cache_lru:
+        host: 127.0.0.1
+        port: 6379
+        db: 1
+
     s3_access_key: _env:RESIN_REGISTRY_S3_KEY
     s3_bucket: _env:RESIN_REGISTRY_S3_BUCKET
     s3_secret_key: _env:RESIN_REGISTRY_S3_SECRET

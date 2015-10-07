@@ -1,5 +1,6 @@
-* Fixed requests logging all requests as coming from 127.0.0.1. [Aleksis]
-* Fixed an rsyslogd infinite restart loop when there is no logentries token. [Page]
+* Set up caching for the docker registry to improve performance. [External] [Page]
+* Fixed requests logging all requests as coming from 127.0.0.1. [Internal] [Aleksis]
+* Fixed an rsyslogd infinite restart loop when there is no logentries token. [Internal] [Page]
 
 # 2015-08-18
 
