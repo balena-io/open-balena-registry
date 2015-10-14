@@ -11,8 +11,11 @@ RUN apt-get -q update \
 		python-dev \
 		python-gevent \
 		python-pip \
+		redis-server \
 		swig \
-	&& rm -rf /var/lib/apt/lists/*
+	&& rm -rf /var/lib/apt/lists/* \
+	&& sed --in-place 's/# maxmemory <bytes>/maxmemory 100mb/' /etc/redis/redis.conf \
+	&& sed --in-place 's/# maxmemory-policy volatile-lru/maxmemory-policy allkeys-lru/' /etc/redis/redis.conf
 
 ENV REGISTRY_VERSION 0.9.1
 ENV REGISTRY_URL https://github.com/docker/docker-registry/archive/${REGISTRY_VERSION}.tar.gz
