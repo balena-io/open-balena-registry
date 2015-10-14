@@ -1,3 +1,4 @@
+* Fixed requests logging all requests as coming from 127.0.0.1. [Aleksis]
 * Fixed an rsyslogd infinite restart loop when there is no logentries token. [Page]
 
 # 2015-08-18
