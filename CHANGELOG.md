@@ -1,3 +1,5 @@
+# 2015-10-19
+
 * Set up caching for the docker registry to improve performance. [External] [Page]
 * Fixed an rsyslogd infinite restart loop when there is no logentries token. [Internal] [Page]
 
