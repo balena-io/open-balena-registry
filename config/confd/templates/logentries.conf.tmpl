@@ -1,4 +1,4 @@
-{{if exists "/resin/registry/logentries/token"}}
+{{if getv "/resin/registry/logentries/token"}}
 $template Logentries,"{{getv "/resin/registry/logentries/token"}} %HOSTNAME% %syslogtag%%msg%\n"
 *.* @@data.logentries.com:443;Logentries
 {{else}}
