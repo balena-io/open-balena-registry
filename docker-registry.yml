@@ -28,7 +28,7 @@ prod:
     secret_key: _env:RESIN_REGISTRY_SECRET_KEY
 
     storage_path: _env:RESIN_REGISTRY_STORAGE_PATH
-    storage_redirect: true
+    storage_redirect: false
 
 dev:
     <<: *common
