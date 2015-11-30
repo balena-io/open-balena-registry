@@ -1,3 +1,4 @@
+* Disabled registry redirects so docker clients >= 1.7 can pull. [External] [Page]
 * Switched to a purely etcd backed confd. [Internal] [Page]
 
 # 2015-10-19
