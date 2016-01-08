@@ -1,3 +1,5 @@
+* Updated to the new resin-base. [Internal] [Page]
+
 # 2015-12-01
 
 * Disabled registry redirects so docker clients >= 1.7 can pull. [External] [Page]
