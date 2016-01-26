@@ -23,6 +23,10 @@ RUN mkdir /usr/src/docker-registry \
 	&& curl -s -L $REGISTRY_URL | tar xz -C /usr/src/docker-registry --strip-components=1 \
 	&& ln -s /usr/src/docker-registry/config/boto.cfg /etc/boto.cfg
 
+COPY remove-parallelkey-class.patch /usr/src/app/
+
+RUN patch /usr/src/docker-registry/depends/docker-registry-core/docker_registry/core/boto.py /usr/src/app/remove-parallelkey-class.patch
+
 # Install core
 RUN pip install /usr/src/docker-registry/depends/docker-registry-core
 
