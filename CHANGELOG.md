@@ -1,3 +1,5 @@
+* Add docker-registry PR 961 as a patch file. [Internal] [Aleksis]
+
 # 2015-01-18
 
 * Updated to the new resin-base. [Internal] [Page]
