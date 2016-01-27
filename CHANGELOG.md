@@ -1,4 +1,7 @@
+# 2015-01-27
+
 * Add docker-registry PR 961 as a patch file. [Internal] [Aleksis]
+* Added `proxy_set_header Authorization ""` and `proxy_read_timeout 900` [Internal] [Petros]
 
 # 2015-01-18
 
