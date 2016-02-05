@@ -1,3 +1,5 @@
+* Switched to docker registry v2 [External] [Page]
+
 # 2015-01-27
 
 * Add docker-registry PR 961 as a patch file. [Internal] [Aleksis]

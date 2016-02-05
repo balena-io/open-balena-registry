@@ -2,47 +2,28 @@ FROM resin/resin-base:1
 
 EXPOSE 80
 
+# We need features from an up to date (1.9+) nginx so we use their repository
+RUN echo 'deb http://nginx.org/packages/mainline/debian/ jessie nginx' > /etc/apt/sources.list.d/nginx.list
+
 RUN apt-get -q update \
 	&& apt-get install -y \
-		libevent-dev \
-		liblzma-dev \
-		libssl-dev \
+		apache2-utils \
+		ca-certificates \
+		librados2 \
 		nginx \
-		python-dev \
-		python-gevent \
-		python-pip \
-		redis-server \
-		swig \
 	&& rm -rf /var/lib/apt/lists/* \
-	&& sed --in-place 's/# maxmemory <bytes>/maxmemory 100mb/' /etc/redis/redis.conf \
-	&& sed --in-place 's/# maxmemory-policy volatile-lru/maxmemory-policy allkeys-lru/' /etc/redis/redis.conf
+	&& rm /etc/nginx/conf.d/default.conf \
+	&& ln -s /usr/src/app/nginx.conf /etc/nginx/conf.d/docker_registry.conf
 
-ENV REGISTRY_VERSION 0.9.1
-ENV REGISTRY_URL https://github.com/docker/docker-registry/archive/${REGISTRY_VERSION}.tar.gz
-RUN mkdir /usr/src/docker-registry \
-	&& curl -s -L $REGISTRY_URL | tar xz -C /usr/src/docker-registry --strip-components=1 \
-	&& ln -s /usr/src/docker-registry/config/boto.cfg /etc/boto.cfg
+ENV REGISTRY_VERSION 2.2.1
+ENV REGISTRY_BINARY_COMMIT bd3fb9d19c2ab0b1bf93b7760d446620ed619988
+ENV REGISTRY_BINARY_URL https://github.com/docker/distribution-library-image/raw/${REGISTRY_BINARY_COMMIT}/registry/registry
 
-COPY remove-parallelkey-class.patch /usr/src/app/
-
-RUN patch /usr/src/docker-registry/depends/docker-registry-core/docker_registry/core/boto.py /usr/src/app/remove-parallelkey-class.patch
-
-# Install core
-RUN pip install /usr/src/docker-registry/depends/docker-registry-core
-
-# Install registry
-RUN pip install file:///usr/src/docker-registry#egg=docker-registry[bugsnag,newrelic,cors]
-
-RUN rm /etc/nginx/sites-enabled/default \
-	&& ln -s /usr/src/app/nginx.conf /etc/nginx/sites-enabled/docker_registry \
-	&& ln -s /usr/src/app/docker-registry.yml /etc/docker-registry.yml
-
-RUN patch \
-	$(python -c 'import boto; import os; print os.path.dirname(boto.__file__)')/connection.py \
-	< /usr/src/docker-registry/contrib/boto_header_patch.diff
-
-COPY . /usr/src/app
+RUN wget -O /usr/local/bin/docker-registry ${REGISTRY_BINARY_URL} \
+	&& chmod a+x /usr/local/bin/docker-registry
 
 COPY config/services/ /etc/systemd/system/
+
+COPY . /usr/src/app
 
 RUN systemctl enable resin-registry.service

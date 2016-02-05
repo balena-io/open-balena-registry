@@ -1,0 +1,29 @@
+version: 0.1
+log:
+    level: warn
+http:
+    addr: :5000
+    secret: {{getv "/resin/registry2/secret-key"}}
+    headers:
+        X-Content-Type-Options: [nosniff]
+storage:
+{{if exists "/resin/registry2/s3/bucket"}}
+    s3:
+        accesskey: {{getv "/resin/registry2/s3/key"}}
+        secretkey: {{getv "/resin/registry2/s3/secret"}}
+        bucket: {{getv "/resin/registry2/s3/bucket"}}
+        encrypt: false
+        secure: false
+        rootdirectory: {{getv "/resin/registry2/storage-path"}}
+{{else}}
+    filesystem:
+        rootdirectory: {{getv "/resin/registry2/storage-path"}}
+{{end}}
+cache:
+    blobdescriptor: redis
+redis:
+    addr: 127.0.0.1:6379
+    db: 0
+
+redirect:
+    disable: true

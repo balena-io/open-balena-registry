@@ -1,0 +1,6 @@
+[template]
+src = "docker-registry.yml.tmpl"
+dest = "/etc/docker-registry.yml"
+keys = [
+  "/resin/registry2/",
+]
