@@ -2,5 +2,6 @@
 src = "docker-registry.yml.tmpl"
 dest = "/etc/docker-registry.yml"
 keys = [
+  "/resin/common/region",
   "/resin/registry2/",
 ]
