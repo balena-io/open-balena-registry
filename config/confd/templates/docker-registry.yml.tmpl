@@ -11,9 +11,11 @@ storage:
     s3:
         accesskey: {{getv "/resin/registry2/s3/key"}}
         secretkey: {{getv "/resin/registry2/s3/secret"}}
+        region: {{getv "/resin/common/region"}}
         bucket: {{getv "/resin/registry2/s3/bucket"}}
         encrypt: false
-        secure: false
+        secure: true
+        v4auth: true
         rootdirectory: {{getv "/resin/registry2/storage-path"}}
 {{else}}
     filesystem:

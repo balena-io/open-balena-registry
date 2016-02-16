@@ -8,7 +8,6 @@ Before=nginx.service
 
 [Service]
 WorkingDirectory=/usr/src/app
-EnvironmentFile=/usr/src/app/config/env
 ExecStart=/usr/local/bin/docker-registry /etc/docker-registry.yml
 Restart=always
 
