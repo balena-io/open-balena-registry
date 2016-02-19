@@ -1,3 +1,5 @@
+# 2016-02-19
+
 * Switched to docker registry v2 [External] [Page]
 
 # 2015-01-27
