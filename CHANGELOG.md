@@ -1,3 +1,7 @@
+# 2016-03-08
+
+* Updated to registry 2.3.0 [Internal] [Page]
+
 # 2016-02-19
 
 * Switched to docker registry v2 [External] [Page]
