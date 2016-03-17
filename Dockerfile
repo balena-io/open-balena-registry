@@ -15,8 +15,8 @@ RUN apt-get -q update \
 	&& rm /etc/nginx/conf.d/default.conf \
 	&& ln -s /usr/src/app/nginx.conf /etc/nginx/conf.d/docker_registry.conf
 
-ENV REGISTRY_VERSION 2.3.0
-ENV REGISTRY_BINARY_COMMIT adffb8e8781e5562c52627d963b3eba93eb9db93
+ENV REGISTRY_VERSION 2.3.1
+ENV REGISTRY_BINARY_COMMIT d7b2c405ae6b67b39460d57231f67731fe232819
 ENV REGISTRY_BINARY_URL https://github.com/docker/distribution-library-image/raw/${REGISTRY_BINARY_COMMIT}/registry/registry
 
 RUN wget -O /usr/local/bin/docker-registry ${REGISTRY_BINARY_URL} \
