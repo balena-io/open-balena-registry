@@ -1,3 +1,5 @@
+* Updated registry to v2.3.1 [Internal] [Page]
+
 # 2016-03-08
 
 * Updated to registry 2.3.0 [Internal] [Page]
