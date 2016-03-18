@@ -15,7 +15,7 @@ storage:
         bucket: {{getv "/resin/registry2/s3/bucket"}}
         encrypt: false
         secure: true
-        v4auth: true
+        v4auth: false
         rootdirectory: {{getv "/resin/registry2/storage-path"}}
 {{else}}
     filesystem:
