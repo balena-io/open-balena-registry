@@ -1,3 +1,7 @@
+# 2016-03-29
+
+* Disabled S3 v4 auth as it sometimes returned a 500 error. [Internal] [Petros]
+
 # 2016-03-18
 
 * Updated registry to v2.3.1 [Internal] [Page]
