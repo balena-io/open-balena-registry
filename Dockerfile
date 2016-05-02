@@ -2,15 +2,17 @@ FROM resin/resin-base:2
 
 EXPOSE 80
 
-# We need features from an up to date (1.9+) nginx so we use their repository
-RUN echo 'deb http://nginx.org/packages/mainline/debian/ jessie nginx' > /etc/apt/sources.list.d/nginx.list
+ENV NGINX_VERSION 1.10.0-1~jessie
 
-RUN apt-get -q update \
-	&& apt-get install -y \
+RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 \
+	&& echo 'deb http://nginx.org/packages/debian/ jessie nginx' >> /etc/apt/sources.list \
+	&& apt-get update \
+	&& apt-get install \
 		apache2-utils \
 		ca-certificates \
 		librados2 \
-		nginx \
+		nginx=${NGINX_VERSION} \
+	&& rm /etc/init.d/nginx \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& rm /etc/nginx/conf.d/default.conf \
 	&& ln -s /usr/src/app/nginx.conf /etc/nginx/conf.d/docker_registry.conf
