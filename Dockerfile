@@ -12,7 +12,6 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC64107
 		ca-certificates \
 		librados2 \
 		nginx=${NGINX_VERSION} \
-	&& rm /etc/init.d/nginx \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& rm /etc/nginx/conf.d/default.conf \
 	&& ln -s /usr/src/app/nginx.conf /etc/nginx/conf.d/docker_registry.conf
