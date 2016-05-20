@@ -16,8 +16,8 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC64107
 	&& rm /etc/nginx/conf.d/default.conf \
 	&& ln -s /usr/src/app/nginx.conf /etc/nginx/conf.d/docker_registry.conf
 
-ENV REGISTRY_VERSION 2.4.0
-ENV REGISTRY_BINARY_COMMIT 3b41b10642a3c24e2405b8f4cfa1441c54f1c8a2
+ENV REGISTRY_VERSION 2.4.1
+ENV REGISTRY_BINARY_COMMIT 5cbbc8d1e6046cef5938e3380fd2a5fbd854f921
 ENV REGISTRY_BINARY_URL https://github.com/docker/distribution-library-image/raw/${REGISTRY_BINARY_COMMIT}/registry/registry
 
 RUN wget -O /usr/local/bin/docker-registry ${REGISTRY_BINARY_URL} \

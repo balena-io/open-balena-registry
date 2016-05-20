@@ -1,3 +1,5 @@
+* Updated registry to v2.4.1 [Internal] [Page]
+
 # 2016-05-10
 
 * Updated to nginx 1.10.0 [Internal] [Page]
