@@ -1,3 +1,5 @@
+* Updated registry to v2.5.0 [Internal] [Page]
+
 # 2016-06-24 (f271229)
 
 * Updated registry to v2.4.1 [Internal] [Page]
