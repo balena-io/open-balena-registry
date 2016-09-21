@@ -1,3 +1,4 @@
+* Limit nginx server information disclosing [External] [Kostas]
 * Updated to nginx 1.10.2 [Internal] [Page]
 * Updated registry to v2.5.0 [Internal] [Page]
 
