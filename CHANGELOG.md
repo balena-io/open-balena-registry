@@ -1,3 +1,4 @@
+* Updated to nginx 1.10.2 [Internal] [Page]
 * Updated registry to v2.5.0 [Internal] [Page]
 
 # 2016-06-24 (f271229)
