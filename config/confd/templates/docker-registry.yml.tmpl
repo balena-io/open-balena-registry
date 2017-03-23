@@ -6,6 +6,12 @@ http:
     secret: {{getv "/resin/registry2/secret-key"}}
     headers:
         X-Content-Type-Options: [nosniff]
+auth:
+    token:
+        service: {{getv "/resin/registry2/host"}}
+        realm: {{getv "/resin/api/tokenauth/realm"}}
+        issuer: {{getv "/resin/api/tokenauth/issuer"}}
+        rootcertbundle: /certs/registry-tokenauth.crt
 storage:
 {{if exists "/resin/registry2/s3/bucket"}}
     s3:

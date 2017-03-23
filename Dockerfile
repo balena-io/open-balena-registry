@@ -15,7 +15,7 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC64107
 		musl \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& rm /etc/nginx/conf.d/default.conf \
-	&& ln -s /usr/src/app/nginx.conf /etc/nginx/conf.d/docker_registry.conf
+	&& rm /etc/nginx/nginx.conf
 
 # registry 2.5.0
 ENV REGISTRY_VERSION 3688baf676da41deb7073e197e9c6348397b397d
@@ -27,6 +27,8 @@ RUN URL="https://github.com/docker/distribution-library-image/blob/${REGISTRY_VE
 	&& echo "${REGISTRY_SHA256}" /usr/local/bin/docker-registry | sha256sum -c -
 
 COPY config/services/ /etc/systemd/system/
+
+RUN ln -s /usr/src/app/nginx.conf /etc/nginx/nginx.conf
 
 COPY . /usr/src/app
 
