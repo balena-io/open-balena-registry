@@ -17,9 +17,9 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC64107
 	&& rm /etc/nginx/conf.d/default.conf \
 	&& rm /etc/nginx/nginx.conf
 
-# registry 2.6.1
-ENV REGISTRY_VERSION 576b139d6eac5b35c9b3e9fe6c2e5132b0c7e03b
-ENV REGISTRY_SHA256 5c5039e8d72268cfb68190ad3fff660b5289e134f2038997f3d768f4af6da878
+# registry 2.6.2
+ENV REGISTRY_VERSION bc5d4f15a7e8d12ed6e5174ac4edab4b6032d09f
+ENV REGISTRY_SHA256 84b718193f07885b39a73be34994d50a6259f62abfca6dbd2ced279fefcc24e5
 
 RUN URL="https://github.com/docker/distribution-library-image/blob/${REGISTRY_VERSION}/registry/registry?raw=true" \
 	&& wget -qO /usr/local/bin/docker-registry "$URL" \
