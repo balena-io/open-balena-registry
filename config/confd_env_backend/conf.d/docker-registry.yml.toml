@@ -1,0 +1,14 @@
+[template]
+src = "docker-registry.yml.tmpl"
+dest = "/etc/docker-registry.yml"
+keys = [
+  "COMMON_REGION",
+  "REGISTRY2_SECRETKEY",
+  "REGISTRY2_HOST",
+  "TOKENAUTH_REALM",
+  "TOKENAUTH_ISSUER",
+  "REGISTRY2_S3_BUCKET",
+  "REGISTRY2_S3_KEY",
+  "REGISTRY2_S3_SECRET",
+  "REGISTRY2_STORAGEPATH",
+]
