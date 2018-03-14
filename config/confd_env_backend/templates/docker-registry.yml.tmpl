@@ -1,0 +1,37 @@
+version: 0.1
+log:
+    level: warn
+http:
+    addr: :5000
+    secret: {{getenv "REGISTRY2_SECRETKEY"}}
+    headers:
+        X-Content-Type-Options: [nosniff]
+auth:
+    token:
+        service: {{getenv "REGISTRY2_HOST"}}
+        realm: {{getenv "TOKENAUTH_REALM"}}
+        issuer: {{getenv "TOKENAUTH_ISSUER"}}
+        rootcertbundle: /certs/registry-tokenauth.crt
+storage:
+{{if exists "REGISTRY2_S3_BUCKET"}}
+    s3:
+        accesskey: {{getenv "REGISTRY2_S3_KEY"}}
+        secretkey: {{getenv "REGISTRY2_S3_SECRET"}}
+        region: {{getenv "COMMON_REGION"}}
+        bucket: {{getenv "REGISTRY2_S3_BUCKET"}}
+        encrypt: false
+        secure: true
+        v4auth: true
+        rootdirectory: {{getenv "REGISTRY2_STORAGEPATH"}}
+{{else}}
+    filesystem:
+        rootdirectory: {{getenv "REGISTRY2_STORAGEPATH"}}
+{{end}}
+cache:
+    blobdescriptor: redis
+redis:
+    addr: 127.0.0.1:6379
+    db: 0
+
+redirect:
+    disable: true
