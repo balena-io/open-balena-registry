@@ -1,4 +1,4 @@
-FROM resin/resin-base:2
+FROM resin/resin-base:v3.3.0
 
 EXPOSE 80
 
