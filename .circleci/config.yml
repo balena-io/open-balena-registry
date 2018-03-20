@@ -1,0 +1,22 @@
+---
+version: 2
+jobs:
+  build:
+    docker:
+      - image: library/docker:17
+    working_directory: /tmp/build
+    environment:
+      DOCKER_USERNAME: travisciresin
+      DOCKER_IMAGE: resin/resin-registry2
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run: 
+          name: Setup
+          command: |
+            docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+            apk add --no-cache git
+      - run:
+          name: Build and push
+          command: |
+            IMAGE_NAME=$DOCKER_IMAGE BRANCH_NAME=$CIRCLE_BRANCH ./automation/build.sh
