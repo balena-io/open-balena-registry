@@ -4,9 +4,8 @@ EXPOSE 80
 
 ENV NGINX_VERSION 1.12.1-1~stretch
 
-RUN wget https://sks-keyservers.net/sks-keyservers.netCA.pem -O /usr/local/share/ca-certificates/sks-keyservers.crt \
-	&& update-ca-certificates \
-	&& apt-key adv --keyserver hkps://hkps.pool.sks-keyservers.net --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 \
+RUN curl -fsSL https://nginx.org/keys/nginx_signing.key | apt-key add - \
+	&& apt-key fingerprint 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 | grep "573B FD6B 3D8F BC64 1079  A6AB ABF5 BD82 7BD9 BF62" \
 	&& echo 'deb http://nginx.org/packages/debian/ stretch nginx' >> /etc/apt/sources.list \
 	&& apt-get update \
 	&& apt-get install \
@@ -16,8 +15,6 @@ RUN wget https://sks-keyservers.net/sks-keyservers.netCA.pem -O /usr/local/share
 		nginx=${NGINX_VERSION} \
 		musl \
 	&& rm -rf /var/lib/apt/lists/* \
-	&& rm /usr/local/share/ca-certificates/sks-keyservers.crt \
-	&& update-ca-certificates \
 	&& rm /etc/nginx/conf.d/default.conf \
 	&& rm /etc/nginx/nginx.conf
 
