@@ -3,9 +3,6 @@ Description=resin-registry
 Requires=confd.service
 After=confd.service
 
-Requires=nginx.service
-Before=nginx.service
-
 [Service]
 WorkingDirectory=/usr/src/app
 EnvironmentFile=/usr/src/app/config/env

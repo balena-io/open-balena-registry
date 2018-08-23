@@ -2,7 +2,8 @@ version: 0.1
 log:
     level: warn
 http:
-    addr: :5000
+    addr: :80
+    host: https://{{getenv "REGISTRY2_HOST"}}
     secret: {{getenv "REGISTRY2_SECRETKEY"}}
     headers:
         X-Content-Type-Options: [nosniff]
