@@ -2,7 +2,8 @@ version: 0.1
 log:
     level: warn
 http:
-    addr: :5000
+    addr: :80
+    host: https://{{getv "/resin/registry2/host"}}
     secret: {{getv "/resin/registry2/secret-key"}}
     headers:
         X-Content-Type-Options: [nosniff]
