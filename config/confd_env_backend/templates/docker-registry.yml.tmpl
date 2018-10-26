@@ -3,15 +3,15 @@ log:
     level: warn
 http:
     addr: :80
-    host: https://{{getenv "REGISTRY2_HOST"}}
+    host: https://{{getenv "BALENA_REGISTRY2_HOST"}}
     secret: {{getenv "REGISTRY2_SECRETKEY"}}
     headers:
         X-Content-Type-Options: [nosniff]
 auth:
     token:
-        service: {{getenv "REGISTRY2_HOST"}}
-        realm: {{getenv "TOKENAUTH_REALM"}}
-        issuer: {{getenv "TOKENAUTH_ISSUER"}}
+        service: {{getenv "BALENA_REGISTRY2_HOST"}}
+        realm: {{getenv "BALENA_TOKEN_AUTH_REALM"}}
+        issuer: {{getenv "BALENA_TOKEN_AUTH_ISSUER"}}
         rootcertbundle: /certs/registry-tokenauth.crt
 storage:
 {{if exists "REGISTRY2_S3_BUCKET"}}
