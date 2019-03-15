@@ -7,11 +7,11 @@ RUN apt-get update \
 		musl \
 	&& rm -rf /var/lib/apt/lists/*
 
-# registry 2.6.2
-ENV REGISTRY_VERSION bc5d4f15a7e8d12ed6e5174ac4edab4b6032d09f
-ENV REGISTRY_SHA256 84b718193f07885b39a73be34994d50a6259f62abfca6dbd2ced279fefcc24e5
+# registry 2.7.1
+ENV REGISTRY_VERSION 0b6ea3ba50b65563600a717f07db4cfa6f18f957
+ENV REGISTRY_SHA256 d494c104bc9aa4b39dd473f086dbe0a5bdf370f1cb4a7b9bb2bd38b5e58bb106
 
-RUN URL="https://github.com/docker/distribution-library-image/blob/${REGISTRY_VERSION}/registry/registry?raw=true" \
+RUN URL="https://github.com/docker/distribution-library-image/raw/${REGISTRY_VERSION}/amd64/registry" \
 	&& wget -qO /usr/local/bin/docker-registry "$URL" \
 	&& chmod a+x /usr/local/bin/docker-registry \
 	&& echo "${REGISTRY_SHA256}" /usr/local/bin/docker-registry | sha256sum -c -
