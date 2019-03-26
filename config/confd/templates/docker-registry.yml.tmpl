@@ -14,8 +14,10 @@ auth:
         issuer: {{getv "/resin/api/tokenauth/issuer"}}
         rootcertbundle: /certs/registry-tokenauth.crt
 storage:
+{{if eq (getv "/resin/registry2/cache-enabled" "false") "true"}}
     cache:
         blobdescriptor: redis
+{{end}}
 {{if exists "/resin/registry2/s3/bucket"}}
     s3:
         accesskey: {{getv "/resin/registry2/s3/key"}}
@@ -30,9 +32,12 @@ storage:
     filesystem:
         rootdirectory: {{getv "/resin/registry2/storage-path"}}
 {{end}}
+
+{{if eq (getv "/resin/registry2/cache-enabled" "false") "true"}}
 redis:
-    addr: 127.0.0.1:6379
-    db: 0
+    addr: {{getv "/resin/registry2/cache-addr" "127.0.0.1:6379"}}
+    db: {{getv "/resin/registry2/cache-db" "0"}}
+{{end}}
 
 redirect:
     disable: true

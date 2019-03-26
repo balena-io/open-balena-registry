@@ -14,6 +14,10 @@ auth:
         issuer: {{getenv "BALENA_TOKEN_AUTH_ISSUER"}}
         rootcertbundle: /certs/registry-tokenauth.crt
 storage:
+{{if eq (getenv "REGISTRY2_CACHE_ENABLED" "false") "true"}}
+    cache:
+        blobdescriptor: redis
+{{end}}
 {{if exists "REGISTRY2_S3_BUCKET"}}
     s3:
         accesskey: {{getenv "REGISTRY2_S3_KEY"}}
@@ -28,11 +32,12 @@ storage:
     filesystem:
         rootdirectory: {{getenv "REGISTRY2_STORAGEPATH"}}
 {{end}}
-cache:
-    blobdescriptor: redis
+
+{{if eq (getenv "REGISTRY2_CACHE_ENABLED" "false") "true"}}
 redis:
-    addr: 127.0.0.1:6379
-    db: 0
+    addr: {{getenv "REGISTRY2_CACHE_ADDR" "127.0.0.1:6379"}}
+    db: {{getenv "REGISTRY2_CACHE_DB" "0"}}
+{{end}}
 
 redirect:
     disable: true
