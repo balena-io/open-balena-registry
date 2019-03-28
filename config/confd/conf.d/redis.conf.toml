@@ -1,0 +1,8 @@
+[template]
+src = "redis.conf.tmpl"
+dest = "/etc/redis/redis.conf"
+keys = [
+  "/resin/registry2/",
+]
+mode = "0644"
+reload_cmd = "chown redis:redis /etc/redis/redis.conf; systemctl restart redis-server"

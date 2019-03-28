@@ -6,9 +6,7 @@ RUN apt-get update \
 	&& apt-get install \
 		musl \
 		redis-server \
-	&& rm -rf /var/lib/apt/lists/* \
-	&& sed --in-place 's/# maxmemory <bytes>/maxmemory 1000mb/' /etc/redis/redis.conf \
-	&& sed --in-place 's/# maxmemory-policy noeviction/maxmemory-policy allkeys-lru/' /etc/redis/redis.conf
+	&& rm -rf /var/lib/apt/lists/*
 
 # registry 2.7.1
 ENV REGISTRY_VERSION 0b6ea3ba50b65563600a717f07db4cfa6f18f957
