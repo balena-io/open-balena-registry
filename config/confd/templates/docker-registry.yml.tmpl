@@ -1,43 +1,43 @@
 version: 0.1
 log:
-    level: warn
+  level: warn
 http:
-    addr: :80
-    host: https://{{getv "/resin/registry2/host"}}
-    secret: {{getv "/resin/registry2/secret-key"}}
-    headers:
-        X-Content-Type-Options: [nosniff]
+  addr: :80
+  host: https://{{getv "/resin/registry2/host"}}
+  secret: {{getv "/resin/registry2/secret-key"}}
+  headers:
+    X-Content-Type-Options: [nosniff]
 auth:
-    token:
-        service: {{getv "/resin/registry2/host"}}
-        realm: {{getv "/resin/api/tokenauth/realm"}}
-        issuer: {{getv "/resin/api/tokenauth/issuer"}}
-        rootcertbundle: /certs/registry-tokenauth.crt
+  token:
+    service: {{getv "/resin/registry2/host"}}
+    realm: {{getv "/resin/api/tokenauth/realm"}}
+    issuer: {{getv "/resin/api/tokenauth/issuer"}}
+    rootcertbundle: /certs/registry-tokenauth.crt
 storage:
 {{if eq (getv "/resin/registry2/cache-enabled" "false") "true"}}
-    cache:
-        blobdescriptor: redis
+  cache:
+    blobdescriptor: redis
 {{end}}
 {{if exists "/resin/registry2/s3/bucket"}}
-    s3:
-        accesskey: {{getv "/resin/registry2/s3/key"}}
-        secretkey: {{getv "/resin/registry2/s3/secret"}}
-        region: {{getv "/resin/common/region"}}
-        bucket: {{getv "/resin/registry2/s3/bucket"}}
-        encrypt: false
-        secure: true
-        v4auth: true
-        rootdirectory: {{getv "/resin/registry2/storage-path"}}
+  s3:
+    accesskey: {{getv "/resin/registry2/s3/key"}}
+    secretkey: {{getv "/resin/registry2/s3/secret"}}
+    region: {{getv "/resin/common/region"}}
+    bucket: {{getv "/resin/registry2/s3/bucket"}}
+    encrypt: false
+    secure: true
+    v4auth: true
+    rootdirectory: {{getv "/resin/registry2/storage-path"}}
 {{else}}
-    filesystem:
-        rootdirectory: {{getv "/resin/registry2/storage-path"}}
+  filesystem:
+    rootdirectory: {{getv "/resin/registry2/storage-path"}}
 {{end}}
 
 {{if eq (getv "/resin/registry2/cache-enabled" "false") "true"}}
 redis:
-    addr: {{getv "/resin/registry2/cache-addr" "127.0.0.1:6379"}}
-    db: {{getv "/resin/registry2/cache-db" "0"}}
+  addr: {{getv "/resin/registry2/cache-addr" "127.0.0.1:6379"}}
+  db: {{getv "/resin/registry2/cache-db" "0"}}
 {{end}}
 
 redirect:
-    disable: true
+  disable: true
