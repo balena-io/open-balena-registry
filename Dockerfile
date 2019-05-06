@@ -1,4 +1,4 @@
-FROM balena/open-balena-base:v7.0.0
+FROM balena/open-balena-base:v7.0.2
 
 EXPOSE 80
 
@@ -17,8 +17,8 @@ RUN URL="https://github.com/docker/distribution-library-image/raw/${REGISTRY_VER
 	&& chmod a+x /usr/local/bin/docker-registry \
 	&& echo "${REGISTRY_SHA256}" /usr/local/bin/docker-registry | sha256sum -c -
 
-COPY config/services/resin-registry.service /etc/systemd/system/
+COPY config/services/balena-registry.service /etc/systemd/system/
 
 COPY . /usr/src/app
 
-RUN systemctl enable resin-registry.service
+RUN systemctl enable balena-registry.service
