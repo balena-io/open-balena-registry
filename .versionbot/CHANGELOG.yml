@@ -1,0 +1,487 @@
+- commits:
+  - author: Heds Simons
+    body: ""
+    footers:
+      change-type: patch
+      signed-off-by: Heds Simons <heds@balena.io>
+    hash: b5bdd5297254dcc302cb95fb5ebeca2d7037fb67
+    subject: 'versionbot: Remove old VB1 artefacts'
+  date: "2019-05-15T10:27:36Z"
+  version: 2.7.3
+- commits:
+  - author: Pagan Gazzard
+    body: ""
+    footers:
+      change-type: patch
+    hash: 9622f1a8582802b190c51da3fa660492cd02cc76
+    subject: Add repo.yml for future open-balena-base updates
+  date: "2019-05-14T14:05:55Z"
+  version: 2.7.2
+- commits:
+  - author: Pagan Gazzard
+    body: ""
+    footers:
+      change-type: patch
+    hash: 4f4282f059389a56da1508f702a13bfd79bccc0c
+    subject: Update open-balena-base to v7.0.2
+  - author: Pagan Gazzard
+    body: ""
+    footers:
+      change-type: patch
+    hash: c159b7c0c729b323576bf2fe67bc95f2c6fac765
+    subject: Rename resin-registry to balena-registry and disable the start limit
+  date: "2019-05-06T11:53:53Z"
+  version: 2.7.1
+- commits:
+  - author: Akis Kesoglou
+    body: ""
+    footers:
+      change-type: minor
+    hash: a263308d77b39df0044c1feac6fd206ccb7f0ca6
+    subject: Configure Redis via the environment
+  - author: Akis Kesoglou
+    body: ""
+    footers:
+      change-type: patch
+    hash: 2bfe645b05d51ef0396231fddca285c39d9ed1f7
+    subject: Convert indentation to 2 spaces in YAML
+  date: "2019-03-28T11:47:34Z"
+  version: 2.7.0
+- commits:
+  - author: Pagan Gazzard
+    body: ""
+    footers:
+      change-type: minor
+    hash: b9a6ed29f4687d03392b784fe32ab284abbd2ca7
+    subject: Enable redis cache
+  date: "2019-03-15T14:41:19Z"
+  version: 2.6.0
+- commits:
+  - author: Pagan Gazzard
+    body: ""
+    footers:
+      change-type: minor
+    hash: d02b7ea6170302dbd630d64e09c2b4d574a87484
+    subject: Update registry to v2.7.1
+  date: "2019-03-15T12:08:27Z"
+  version: 2.5.0
+- commits:
+  - author: Heds Simons
+    body: ""
+    footers:
+      change-type: minor
+      connects-to: '#64'
+      signed-off-by: Heds Simons <heds@balena.io>
+    hash: 527461abff1e8740799bf84e1343e867e687000c
+    subject: 'open-balena-base: Update open-balena-base to v7.0.0'
+  date: "2019-03-14T17:13:56Z"
+  version: 2.4.0
+- commits:
+  - author: Heds Simons
+    body: ""
+    footers:
+      change-type: minor
+      connects-to: '#62'
+      signed-off-by: Heds Simons <heds@balena.io>
+    hash: 667781011839c8b873c7b3071aab0aa72dc9e7de
+    subject: 'open-balena-base: Update open-balena-base to v6.0.0'
+  date: "2019-03-12T12:31:25Z"
+  version: 2.3.0
+- commits:
+  - author: Heds Simons
+    body: ""
+    footers:
+      change-type: patch
+      connects-to: '#60'
+      signed-off-by: Heds Simons <heds@balena.io>
+    hash: a5c421be24591248c92704ea5449c685b2767278
+    subject: "codeowners: Add\t@dfunckt, @Page- & @hedss"
+  date: "2019-03-09T13:12:05Z"
+  version: 2.2.1
+- commits:
+  - author: Pagan Gazzard
+    body: ""
+    footers:
+      change-type: minor
+    hash: c7158c90e967fbf3e2d47c7e2f68a7bf4eae2c34
+    subject: Update open-balena-base to v5.3.1
+  date: "2019-03-05T17:30:00Z"
+  version: 2.2.0
+- commits:
+  - author: Pagan Gazzard
+    body: ""
+    footers:
+      change-type: patch
+    hash: 58eef77eebc7fdd72731ef3e16f8551171ed1c7c
+    subject: Update open-balena-base to v5.0.1
+  date: "2018-12-03T14:27:01Z"
+  version: 2.1.1
+- commits:
+  - author: Pagan Gazzard
+    body: ""
+    footers:
+      change-type: minor
+    hash: 7572f1d7f03841c813ba2e785120bec3bf1c0a0b
+    subject: Update to open-balena-base 5.0.0, including nodejs 10
+  date: "2018-10-30T15:54:28Z"
+  version: 2.1.0
+- commits:
+  - author: Akis Kesoglou
+    body: ""
+    footers:
+      change-type: patch
+    hash: a4c1247162cffecb7ba0a4a2a6db6359c9bab6c9
+    subject: Add LICENSE
+  - author: Akis Kesoglou
+    body: ""
+    footers:
+      change-type: patch
+    hash: 27137823fee4214c3b82b84b6bb88d481a821e49
+    subject: Stop publishing to private Docker Hub repo
+  date: "2018-10-29T12:25:15Z"
+  version: 2.0.3
+- commits:
+  - author: Heds Simons
+    body: ""
+    footers:
+      change-type: patch
+      connects-to: '#53'
+      signed-off-by: Heds Simons <heds@balena.io>
+    hash: 4e746334d031e7c63e0a867f43c377a44fa5e344
+    subject: 'base: Update resin-base version to autoset subdomain envvars'
+  date: "2018-10-26T13:36:44Z"
+  version: 2.0.2
+- commits:
+  - author: Will Boyce
+    body: ""
+    footers:
+      change-type: patch
+      signed-off-by: Will Boyce <will@balena.io>
+    hash: c2242cc86d141a6dd8c4fefa529a43e6483f42df
+    subject: 'rename: Publish Docker image to both balena and resin accounts'
+  - author: Will Boyce
+    body: ""
+    footers:
+      change-type: patch
+      signed-off-by: Will Boyce <will@balena.io>
+    hash: 62459c3bf8be18d9e16bf43a1c72a4c7152e61e2
+    subject: 'rename: Use `balena/open-balena-base` base image'
+  date: "2018-10-25T20:26:40Z"
+  version: 2.0.1
+- commits:
+  - author: Akis Kesoglou
+    body: |-
+      This commit:
+      - stops pushing to legacy Docker Hub repo
+      - removes `automation` folder and build script
+      - removes CircleCI config
+      - removes Github PR template
+    footers:
+      change-type: major
+      signed-off-by: Akis Kesoglou <akis@resin.io>
+    hash: e887ed2ac3edc518d4b99e604421d7e7abb69e07
+    subject: Prepare for open-sourcing
+  date: "2018-10-01T13:41:45Z"
+  version: 2.0.0
+- commits:
+  - author: Heds Simons
+    body: |-
+      Updates `resin-base` to ensure DNS is prioritised
+      over MDNS, ensuring `.local` aliases are resolved
+      before those published on the local subnet.
+    footers:
+      change-type: patch
+      connects-to: '#50'
+      signed-off-by: Heds Simons <heds@resin.io>
+    hash: a520741c79ed3adab3c43dab7a2055320da91223
+    subject: 'dns: Ensure DNS is prioritised over MDNS'
+  date: "2018-09-28T13:04:26Z"
+  version: 1.9.2
+- commits:
+  - author: Heds Simons
+    body: |-
+      This change allows output to be captured by the Supervisor
+      on resinOS devices when run as a service.
+      Includes ResinCI config.
+    footers:
+      change-type: patch
+      connects-to: '#48'
+      signed-off-by: Heds Simons <heds@resin.io>
+    hash: b7aabbdb0a9baaa9c77b4246371103b6f5146499
+    subject: 'logging: Enable logging output to also go to console'
+  date: "2018-09-25T10:53:23Z"
+  version: 1.9.1
+- commits:
+  - author: Pagan Gazzard
+    body: ""
+    footers:
+      change-type: minor
+      signed-off-by: Pagan Gazzard <page@resin.io>
+    hash: 4017c23cbee9cf92f9e93929efe1a5d2d3d3f07f
+    subject: Update to resin-base 4.3.0
+  date: "2018-09-11T13:51:29Z"
+  version: 1.9.0
+- commits:
+  - author: Akis Kesoglou
+    body: ""
+    footers:
+      change-type: minor
+      signed-off-by: Akis Kesoglou <akis@resin.io>
+    hash: b1d3f5edab2c342c5256bedcac83b66485d4719d
+    subject: Expose Registry directly instead of proxying via nginx
+  date: "2018-08-27T09:36:32Z"
+  version: 1.8.0
+- commits:
+  - author: Heds Simons
+    body: ""
+    footers:
+      change-type: patch
+      connects-to: '#43'
+      signed-off-by: Heds Simons <heds@whaleway.net>
+    hash: 2411aff85798c29e0a047ebe851864970a06366e
+    subject: Revert to use of sks-keyservers for nginx key fetch.
+  date: "2018-07-17T02:55:54Z"
+  version: 1.7.6
+- commits:
+  - author: Heds Simons
+    body: ""
+    footers:
+      change-type: patch
+      connects-to: '#41'
+      signed-off-by: Heds Simons <heds@whaleway.net>
+    hash: 3a8dba7b9c4713fefe16f09ce1e7154dd7f09403
+    subject: Move to fetching `nginx` signing key directly from nginx.org instead
+      of 3rd party keyserver.
+  date: "2018-07-16T14:24:22Z"
+  version: 1.7.5
+- commits:
+  - author: Heds Simons
+    body: ""
+    footers:
+      change-type: patch
+      connects-to: '#39'
+      signed-off-by: Heds Simons <heds@whaleway.net>
+    hash: e4e4ce58d51e4b8701559cd63f947f6e1553601e
+    subject: Ensure `nginx` runs in daemon mode so `systemd` doesn't stop it due to
+      timeout.
+  date: "2018-07-10T16:27:08Z"
+  version: 1.7.4
+- commits:
+  - author: Heds Simons
+    body: Also moves to the HKPS pool for key retrieval.
+    footers:
+      change-type: patch
+      connects-to: '#37'
+      signed-off-by: Heds Simons <heds@whaleway.net>
+    hash: 85de3fe7a1d50cccfe0b89ab66317b4ed1a5e122
+    subject: Move to latest version of `resin-base` to include MDNS support.
+  date: "2018-07-09T09:53:55Z"
+  version: 1.7.3
+- commits:
+  - author: Heds Simons
+    body: ""
+    footers:
+      change-type: patch
+      connects-to: '#35'
+      signed-off-by: Heds Simons <heds@whaleway.net>
+    hash: 6debf08bd844f8db40738c68c7a576b27103d5b2
+    subject: Move to a more reliable apt keyserver for Nginx install.
+  date: "2018-06-15T09:35:35Z"
+  version: 1.7.2
+- commits:
+  - author: Akis Kesoglou
+    body: ""
+    hash: b04606cdf1afe2698030e157ce42b851d641307c
+    subject: Remove reviewer guidelines from PR template
+  - author: Akis Kesoglou
+    body: ""
+    footers:
+      change-type: patch
+    hash: 0156b2ed29b84c04c865de163012ac11449e26d7
+    subject: Use local build script in CI
+  - author: Akis Kesoglou
+    body: ""
+    hash: 5e9d5a0ee7806790fe184dad8811068f34bf745e
+    subject: Move Circle YAML into its own folder
+  - author: Akis Kesoglou
+    body: ""
+    hash: 5e3eafc774ae66dd18d39ef8c54ffcb9f2145b53
+    subject: Rename build script
+  - author: Akis Kesoglou
+    body: ""
+    hash: 5d165c01dd323890410ed8b54ea301ec357893f0
+    subject: Update CI Docker
+  - author: Akis Kesoglou
+    body: ""
+    hash: 160ef0ac8b578886aa9a46c6d76ba83a1e1021f6
+    subject: Push images to open-balena-registry as well
+  date: "2018-03-20T11:14:42Z"
+  version: 1.7.1
+- commits:
+  - author: Michael Angelos Simos
+    body: ""
+    footers:
+      change-type: minor
+    hash: 9e1f2419fd79a261fc7de19ba3815ae6f79c7b3f
+    subject: Add confd envvar configuration.
+  date: "2018-03-14T14:41:49Z"
+  version: 1.7.0
+- commits:
+  - author: Akis Kesoglou
+    body: This allows using confd’s env var backend
+    footers:
+      change-type: minor
+    hash: 9a7553b22f629055c228d24cc0fdab282a980113
+    subject: Update to resin-base v3.3.0
+  date: "2018-03-14T09:55:28Z"
+  version: 1.6.0
+- commits:
+  - author: Akis Kesoglou
+    body: |-
+      Revert commit 4159eb592be due to nginx.conf already specifying a client_max_body_size that conflicts with the newly specified one.
+      In fact, client_max_body_size is set to `0`, disabling any limits, therefore preventing the registry from responding with 413 when a client tries to upload large layers.
+      This needs further investigation to determine how Docker behaves with various registry settings, but in the meantime this needs to be reverted.
+    footers:
+      change-type: patch
+      connects-to: '#8'
+      hq: https://github.com/resin-io/hq/issues/1115
+    hash: b5ca55082fa7b8e6c94cf233bed97da1ef3e6004
+    subject: 'Revert "nginx.conf: Use equal values for client_body_buffer_size and
+      client_max_body_size to avoid writing big files to disk"'
+  date: "2017-12-14T11:36:32Z"
+  version: 1.5.2
+- commits:
+  - author: Pablo Carranza Velez
+    body: |-
+      Idea taken from https://medium.com/urban-massage-product/nginx-with-docker-easier-said-than-done-d1b5815d00d0 after noticing a user pushing a big layer
+      causing out of space errors writing to /var/cache/nginx.
+    footers:
+      change-type: patch
+      signed-off-by: Pablo Carranza Velez <pablo@resin.io>
+    hash: 4159eb592be9a45aefb4b29ece6b07409b080cda
+    subject: 'nginx.conf: Use equal values for client_body_buffer_size and client_max_body_size
+      to avoid writing big files to disk'
+  date: "2017-12-12T09:37:48Z"
+  version: 1.5.1
+- commits:
+  - author: Akis Kesoglou
+    body: |-
+      This update includes a security fix for CVE-2017-11468. Release notes from github/docker/distribution for this version:
+      This release is a special security release to address an issue allowing an attacker to force arbitrarily-sized memory allocations in a registry instance through the manifest endpoint. The problem has been mitigated by limiting the size of reads for image manifest content.
+    footers:
+      change-type: minor
+      connects-to: '#26'
+    hash: 5a1051934b4ad06b215a37eeb5c9f2d13c616ba6
+    subject: Update registry to 2.6.2
+  date: "2017-09-04T08:31:06Z"
+  version: 1.5.0
+- commits:
+  - author: Akis Kesoglou
+    body: ""
+    footers:
+      change-type: minor
+      connects-to: '#24'
+    hash: 352b7c722eba88fdf6f91465f47967e6d06aca47
+    subject: Added support for Circle.ci
+  date: "2017-08-29T19:54:17Z"
+  version: 1.4.0
+- commits:
+  - author: Akis Kesoglou
+    body: We were keeping nginx logs inside the container eventually filling up the
+      allocated disk space. This commit configures nginx to send logs to syslog, that
+      can then be picked up by journald and sent to Logentries (or wherever appropriate).
+    footers:
+      change-type: patch
+      connects-to: '#22'
+    hash: 1711da4362912dcf621db9086c050cbf130e94cc
+    subject: Log to syslog instead of file
+  date: "2017-08-09T08:08:57Z"
+  version: 1.3.4
+- commits:
+  - author: Akis Kesoglou
+    body: ""
+    footers:
+      change-type: patch
+    hash: 2effc72cdb10255c186c1a852f65776a06d15092
+    subject: Added PR template
+  date: "2017-08-02T09:58:54Z"
+  version: 1.3.3
+- commits:
+  - author: Gergely Imreh
+    body: ""
+    footers:
+      change-type: patch
+    hash: 346c242f0b9d0785b83766730c0d302b186a7fd5
+    subject: bump nginx version to 1.12.1 to fix CVE-2017-7529
+  date: "2017-07-17T21:49:24Z"
+  version: 1.3.2
+- commits:
+  - author: Pagan Gazzard
+    body: ""
+    footers:
+      change-type: patch
+    hash: f6f58b5e1ffc02acf78c8a17e2b5d01997e9fc3a
+    subject: Docker registry 2.6.1 requires v4auth to be true on s3.
+  date: "2017-05-17T08:48:53Z"
+  version: 1.3.1
+- commits:
+  - author: Pagan Gazzard
+    body: ""
+    footers:
+      change-type: minor
+    hash: 470bb1e6053cf96e5a053d88f30b8036a8de7763
+    subject: Update registry to 2.6.1
+  date: "2017-05-17T03:43:49Z"
+  version: 1.3.0
+- commits:
+  - author: Pagan Gazzard
+    body: ""
+    footers:
+      change-type: minor
+    hash: 8eb0a25cfe67123c56b0a16867d327d2533dee0f
+    subject: Update nginx to 1.12.0
+  date: "2017-05-16T21:49:07Z"
+  version: 1.2.0
+- commits:
+  - author: Akis Kesoglou
+    body: ""
+    footers:
+      change-type: minor
+      connects-to: '#11'
+    hash: 52420ab818b13263c2616bd1d161f26055cb7ee1
+    subject: Enable token authentication
+  date: "2017-04-20T09:33:56Z"
+  version: 1.1.0
+- commits:
+  - author: Akis Kesoglou
+    body: ""
+    footers:
+      change-type: major
+      connects-to: '#9'
+    hash: af77ee285f6f40f6844f9a32ffe0ba378f819ea7
+    subject: Prepare project for VersionBot integration
+  - author: Pagan Gazzard
+    body: ""
+    hash: 9aacdf4bb11f4772cbb3a6fa8b64afcb5ccb3b4b
+    subject: Update to nginx 1.10.2
+  - author: Kostas Lekkas
+    body: ""
+    hash: aa3ac62f3bf99c593907d0c4eef61cfd2a96c8b0
+    subject: Limit nginx server information disclosing
+  - author: Pagan Gazzard
+    body: ""
+    hash: e0daae8d99d8028d679fca983731838a2c4dff1e
+    subject: Install musl - it's required for registry 2.5.0
+  - author: Pagan Gazzard
+    body: ""
+    hash: 08b907d3adc69ff953b09c654224532f3c4ecc97
+    subject: Update registry to v2.5.0
+  - author: John (Jack) Brown
+    body: |-
+      By default the registry permits access to the catalog, which enumerates
+      images stored therein. This change will cause NGINX to deny all access
+      to the endpoint.
+    hash: bbdac8d2a250038882cc32ccbf865ff03f0ba537
+    subject: 'fix(registry): Deny access to catalog in NGINX'
+  date: "2017-03-23T11:23:40Z"
+  version: 1.0.0
