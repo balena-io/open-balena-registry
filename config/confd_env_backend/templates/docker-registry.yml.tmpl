@@ -23,6 +23,9 @@ storage:
     accesskey: {{getenv "REGISTRY2_S3_KEY"}}
     secretkey: {{getenv "REGISTRY2_S3_SECRET"}}
     region: {{getenv "COMMON_REGION"}}
+{{if exists "REGISTRY2_S3_REGION_ENDPOINT"}}
+    regionendpoint: {{getenv "REGISTRY2_S3_REGION_ENDPOINT"}}
+{{end}}
     bucket: {{getenv "REGISTRY2_S3_BUCKET"}}
     encrypt: false
     secure: true
