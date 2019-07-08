@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add ability to configure the S3 endpoint
+      hash: 1eaee4a121b37e9f7957e5b9cdca068b6d5c3534
+      body: >
+        This is useful when deploying against an S3-like service for storage,
+        eg. Minio.
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Akis Kesoglou
+  version: 2.9.0
+  date: 2019-06-28T10:36:10.778Z
+- commits:
     - subject: Update open-balena-base to 7.2.2
       hash: 84a7de074330d26befb86d441d1d5c1c2cde6cd3
       body: |
