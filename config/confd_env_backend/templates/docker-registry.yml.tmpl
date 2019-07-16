@@ -40,9 +40,9 @@ storage:
 middleware:
   storage:
     - name: cloudfront
-      option:
-        baseurl: {{getenv "REGISTRY2_S3_CLOUDFRONT_ENDPOINT"}}
-        privatekey: /etc/docker/cloudfront-pk.pem
+      options:
+        baseurl: https://{{getenv "REGISTRY2_S3_CLOUDFRONT_ENDPOINT"}}/
+        privatekey: /etc/ssl/private/cloudfront-pk.pem
         keypairid: {{getenv "REGISTRY2_S3_CLOUDFRONT_KEYPAIR_ID"}}
 {{end}}
 

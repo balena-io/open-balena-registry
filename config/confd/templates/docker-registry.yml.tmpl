@@ -36,13 +36,13 @@ storage:
     rootdirectory: {{getv "/resin/registry2/storage-path"}}
 {{end}}
 
-{{if exists "/resin/registry2/s3/cloudfront"}}
+{{if exists "/resin/registry2/s3/cloudfront/endpoint"}}
 middleware:
   storage:
     - name: cloudfront
-      option:
-        baseurl: {{getv "/resin/registry2/s3/cloudfront/endpoint"}}
-        privatekey: /etc/docker/cloudfront-pk.pem
+      options:
+        baseurl: https://{{getv "/resin/registry2/s3/cloudfront/endpoint"}}/
+        privatekey: /etc/ssl/private/cloudfront-pk.pem
         keypairid: {{getv "/resin/registry2/s3/cloudfront/keypairid"}}
 {{end}}
 
