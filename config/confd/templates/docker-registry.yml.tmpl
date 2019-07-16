@@ -41,6 +41,7 @@ middleware:
   storage:
     - name: cloudfront
       options:
+        ipfilteredby: none
         baseurl: https://{{getv "/resin/registry2/s3/cloudfront/endpoint"}}/
         privatekey: /etc/ssl/private/cloudfront-pk.pem
         keypairid: {{getv "/resin/registry2/s3/cloudfront/keypairid"}}
