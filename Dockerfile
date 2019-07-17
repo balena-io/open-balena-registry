@@ -17,7 +17,7 @@ RUN URL="https://github.com/docker/distribution-library-image/raw/${REGISTRY_VER
 	&& chmod a+x /usr/local/bin/docker-registry \
 	&& echo "${REGISTRY_SHA256}" /usr/local/bin/docker-registry | sha256sum -c -
 
-COPY config/services/balena-registry.service /etc/systemd/system/
+COPY config/services/ /etc/systemd/system/
 
 COPY . /usr/src/app
 
