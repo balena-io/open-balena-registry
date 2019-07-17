@@ -1,4 +1,14 @@
 - commits:
+    - subject: Fix redis-server startup
+      hash: e6216eff22cca1c8178261946e3f91a617ec7d85
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 2.10.2
+  date: 2019-07-17T14:06:42.437Z
+- commits:
     - subject: 'systemd: move StartLimitIntervalSec to proper section'
       hash: ea7ef9f933dc2150243971235e64f5a5858498f6
       body: ''
