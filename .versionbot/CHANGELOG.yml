@@ -1,4 +1,43 @@
 - commits:
+    - subject: 'confd: Set ipfilteredby in docker-registry cloudfront middleware'
+      hash: 650c235072e24c9252f100e7f2a28aa87d6308ff
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Michael Angelos Simos <michalis@balena.io>
+        signed-off-by: Michael Angelos Simos <michalis@balena.io>
+      author: Michael Angelos Simos
+    - subject: 'confd: Expect base64 encoded value for cloudfront-pk'
+      hash: 92c233baf7841ca1c2cc1db01f677d4a69b7322f
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Michael Angelos Simos <michalis@balena.io>
+        signed-off-by: Michael Angelos Simos <michalis@balena.io>
+      author: Michael Angelos Simos
+    - subject: 'confd: Add cloudfront configuration for etcd backend'
+      hash: bfc6d7b1732d43443bddb656e0827aa859c0bb75
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Michael Angelos Simos <michalis@balena.io>
+        signed-off-by: Michael Angelos Simos <michalis@balena.io>
+      author: Michael Angelos Simos
+    - subject: 'confd: Add cloudfront configuration for env backend'
+      hash: 73f24e397d0bf55f5c3d47689309d3c30e0bdabf
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Michael Angelos Simos <michalis@balena.io>
+        signed-off-by: Michael Angelos Simos <michalis@balena.io>
+      author: Michael Angelos Simos
+  version: 2.11.0
+  date: 2019-07-18T10:07:54.295Z
+- commits:
     - subject: Update open-balena-base to 8.0.1
       hash: ccbd89f91264b7e8df1a5b03684ef5fc55bc0e3f
       body: |
