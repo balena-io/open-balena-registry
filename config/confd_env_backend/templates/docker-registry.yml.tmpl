@@ -36,6 +36,17 @@ storage:
     rootdirectory: {{getenv "REGISTRY2_STORAGEPATH"}}
 {{end}}
 
+{{if exists "REGISTRY2_S3_CLOUDFRONT_ENDPOINT"}}
+middleware:
+  storage:
+    - name: cloudfront
+      options:
+        ipfilteredby: none
+        baseurl: https://{{getenv "REGISTRY2_S3_CLOUDFRONT_ENDPOINT"}}/
+        privatekey: /etc/ssl/private/cloudfront-pk.pem
+        keypairid: {{getenv "REGISTRY2_S3_CLOUDFRONT_KEYPAIR_ID"}}
+{{end}}
+
 {{if eq (getenv "REGISTRY2_CACHE_ENABLED" "false") "true"}}
 redis:
   addr: {{getenv "REGISTRY2_CACHE_ADDR" "127.0.0.1:6379"}}

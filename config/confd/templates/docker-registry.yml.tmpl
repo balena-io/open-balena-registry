@@ -36,6 +36,17 @@ storage:
     rootdirectory: {{getv "/resin/registry2/storage-path"}}
 {{end}}
 
+{{if exists "/resin/registry2/s3/cloudfront/endpoint"}}
+middleware:
+  storage:
+    - name: cloudfront
+      options:
+        ipfilteredby: none
+        baseurl: https://{{getv "/resin/registry2/s3/cloudfront/endpoint"}}/
+        privatekey: /etc/ssl/private/cloudfront-pk.pem
+        keypairid: {{getv "/resin/registry2/s3/cloudfront/keypairid"}}
+{{end}}
+
 {{if eq (getv "/resin/registry2/cache-enabled" "false") "true"}}
 redis:
   addr: {{getv "/resin/registry2/cache-addr" "127.0.0.1:6379"}}
