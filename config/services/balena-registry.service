@@ -1,7 +1,7 @@
 [Unit]
 Description=balena-registry
-Requires=confd.service
-After=confd.service
+Requires=confd.service balena-root-ca.service
+After=confd.service balena-root-ca.service
 StartLimitIntervalSec=0
 
 [Service]
