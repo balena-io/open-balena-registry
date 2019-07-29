@@ -1,4 +1,22 @@
 - commits:
+    - subject: 'service: Fix confd template for using S3 storage'
+      hash: d1bf60052729ecd705c9c0f96a5460c9d0c5acdf
+      body: >
+        - the `exists` condition doesn't work for an ENV backend, so just check
+        it has a value
+
+        - the registry service MUST start after the base' balena-root-ca service
+        has completed, otherwise
+          it may not trust the certificate used by the S3 endpoint.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Rich Bayliss <rich@balena.io>
+        signed-off-by: Rich Bayliss <rich@balena.io>
+      author: Rich Bayliss
+  version: 2.11.1
+  date: 2019-07-26T15:24:36.613Z
+- commits:
     - subject: 'confd: Set ipfilteredby in docker-registry cloudfront middleware'
       hash: 650c235072e24c9252f100e7f2a28aa87d6308ff
       body: ''
