@@ -2,5 +2,5 @@
 src = "logentries.conf.tmpl"
 dest = "/etc/rsyslog.d/logentries.conf"
 keys = [
-  "/resin/registry2/logentries/token"
+  "LOGENTRIES_TOKEN"
 ]
