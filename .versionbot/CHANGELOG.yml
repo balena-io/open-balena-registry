@@ -1,4 +1,27 @@
 - commits:
+    - subject: Update open-balena-base to 10.1.0
+      hash: 4c22811baf10af90554aa177f73a54f4bcb7b7d2
+      body: |
+        Update open-balena-base from 10.0.2 to 10.1.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested:
+        - commits:
+            - subject: Update nodejs to 12.19.0
+              hash: 8431b0e087367ac38454017f86bd1d6f8e8eb814
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+              author: Pagan Gazzard
+              nested: []
+          version: open-balena-base-10.1.0
+          date: 2020-10-07T14:47:49.406Z
+  version: 2.13.13
+  date: 2020-10-08T10:07:49.513Z
+- commits:
     - subject: Update open-balena-base to v10.0.2
       hash: c698b21e524245438808513a2fd330b383f6d082
       body: |
