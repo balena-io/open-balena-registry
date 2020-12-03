@@ -2,12 +2,6 @@ FROM balena/open-balena-base:v11.0.2
 
 EXPOSE 80
 
-RUN apt-get update \
-	&& apt-get install \
-		musl \
-		redis-server \
-	&& rm -rf /var/lib/apt/lists/*
-
 # registry 2.7.1
 ENV REGISTRY_VERSION 0b6ea3ba50b65563600a717f07db4cfa6f18f957
 ENV REGISTRY_SHA256 d494c104bc9aa4b39dd473f086dbe0a5bdf370f1cb4a7b9bb2bd38b5e58bb106
