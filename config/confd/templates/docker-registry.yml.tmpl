@@ -1,6 +1,6 @@
 version: 0.1
 log:
-  level: warn
+  level: {{if eq (getenv "BALENA_REGISTRY2_DEBUG" "false") "true"}}debug{{else}}warn{{end}}
 http:
   addr: :80
   host: https://{{getenv "BALENA_REGISTRY2_HOST"}}
