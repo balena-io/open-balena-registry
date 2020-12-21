@@ -1,10 +1,11 @@
 version: 0.1
 log:
-  level: warn
+  level: {{if getenv "REGISTRY2_LOGLEVEL"}}{{getenv "REGISTRY2_LOGLEVEL"}}{{else}}warn{{end}}
+
 http:
   addr: :80
   host: https://{{getenv "BALENA_REGISTRY2_HOST"}}
-  secret: {{getenv "REGISTRY2_SECRETKEY"}}
+  {{if getenv "REGISTRY2_SECRETKEY"}}secret: {{getenv "REGISTRY2_SECRETKEY"}}{{end}}
   headers:
     X-Content-Type-Options: [nosniff]
 auth:
