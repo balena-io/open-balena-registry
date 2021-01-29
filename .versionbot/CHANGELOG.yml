@@ -1,4 +1,15 @@
 - commits:
+    - subject: Remove Hedley from CODEOWNERS
+      hash: 4c901fbec5d6e6463e56362502784a207c810f53
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: dfunckt
+      nested: []
+  version: 2.14.4
+  date: 2021-01-29T12:58:39.406Z
+- commits:
     - subject: Update open-balena-base to 11.0.4
       hash: 8005724eebe35fc49a463e5e928924e6009eb5ec
       body: |
