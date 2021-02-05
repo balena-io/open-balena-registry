@@ -1,4 +1,40 @@
 - commits:
+    - subject: Enable deletion of old entries when using as pull through cache.
+      hash: 303ed0720487cf5d85b5e45f7c5a517dcca26dc5
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Carlo Miguel Cruz <carloc@balena.io>
+        signed-off-by: Carlo Miguel Cruz <carloc@balena.io>
+      author: Carlo Miguel Cruz
+      nested: []
+    - subject: Add ability to configure registry as a Hub proxy
+      hash: 7b3fa83258afa8f824678294b5258b5684e6f25d
+      body: >
+        To enable proxying of Docker Hub, set `REGISTRY2_PROXY_ENABLED` to
+        `true`. This will cache public images pulled through this instance. To
+        access private images, also set `REGISTRY2_PROXY_USERNAME` and
+        `REGISTRY2_PROXY_PASSWORD` to appropriate values.
+
+
+        Storage will highly likely be `filesystem`. To configure it specify
+        `REGISTRY2_STORAGEPATH` to a directory into the registry container. Make
+        sure to mount a volume at that path. Also ensure `REGISTRY2_S3_BUCKET`
+        is *unset*, since its presence causes the instance to use S3 for
+        storage.
+
+
+        The only other required env var is `BALENA_REGISTRY2_HOST` which must be
+        set to the host name the instance will listen to.
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Akis Kesoglou
+      nested: []
+  version: 2.15.0
+  date: 2021-02-04T09:48:19.810Z
+- commits:
     - subject: Remove Hedley from CODEOWNERS
       hash: 4c901fbec5d6e6463e56362502784a207c810f53
       body: ''
