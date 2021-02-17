@@ -1,4 +1,27 @@
 - commits:
+    - subject: Update open-balena-base to 11.0.5
+      hash: d20a71e700a425e813b8725328ba89aa0330f4d5
+      body: |
+        Update open-balena-base from 11.0.4 to 11.0.5
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested:
+        - commits:
+            - subject: Update nodejs to 14.15.5 and npm to 6.14.11
+              hash: 2e812ae8993ad13b1ac0d7a760e4c45ab8b8bd9d
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Pagan Gazzard
+              nested: []
+          version: open-balena-base-11.0.5
+          date: 2021-02-15T15:06:34.842Z
+  version: 2.15.1
+  date: 2021-02-17T16:47:51.127Z
+- commits:
     - subject: Enable deletion of old entries when using as pull through cache.
       hash: 303ed0720487cf5d85b5e45f7c5a517dcca26dc5
       body: ''
