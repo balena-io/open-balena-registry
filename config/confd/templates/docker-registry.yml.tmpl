@@ -23,6 +23,10 @@ auth:
 {{end}}
 
 storage:
+{{if eq (getenv "REGISTRY2_DISABLE_REDIRECT" "false") "true"}}
+  redirect:
+    disable: true
+{{end}}
 {{if eq (getenv "REGISTRY2_CACHE_ENABLED" "false") "true"}}
   cache:
     blobdescriptor: redis
