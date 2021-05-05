@@ -1,4 +1,15 @@
 - commits:
+    - subject: Add ability to disable storage redirect
+      hash: b8a1f7d16b6d6f623df9592c1485af130f83442f
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Bart Versluijs
+      nested: []
+  version: 2.16.0
+  date: 2021-05-05T12:11:30.626Z
+- commits:
     - subject: Update open-balena-base to 11.1.2
       hash: 2a6c043e58d292d3a26d11d0d07eb2bd7ff17ea5
       body: |
