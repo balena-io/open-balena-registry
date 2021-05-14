@@ -1,4 +1,27 @@
 - commits:
+    - subject: Update open-balena-base to 11.2.0
+      hash: 7430397219bd751d3cbfcc22e99497b28d21fe4e
+      body: |
+        Update open-balena-base from 11.1.2 to 11.2.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested:
+        - commits:
+            - subject: Update nodejs to 14.17.0 and npm to 6.14.13
+              hash: d4a35f84c95db475b972aab4ed7781ce47515f39
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+              author: Pagan Gazzard
+              nested: []
+          version: open-balena-base-11.2.0
+          date: 2021-05-14T15:14:39.729Z
+  version: 2.16.1
+  date: 2021-05-14T15:37:11.193Z
+- commits:
     - subject: Add ability to disable storage redirect
       hash: b8a1f7d16b6d6f623df9592c1485af130f83442f
       body: ''
