@@ -1,4 +1,59 @@
 - commits:
+    - subject: Update open-balena-base to 11.3.2
+      hash: a5063ed465b23a036a77da0d931ca5247f6ca49f
+      body: |
+        Update open-balena-base from 11.2.0 to 11.3.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested:
+        - commits:
+            - subject: Update nodejs to 14.17.2
+              hash: cc11cc5654ee0bf85af40882a567c9b7fb644f48
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Pagan Gazzard
+              nested: []
+          version: open-balena-base-11.3.2
+          date: 2021-07-02T17:34:25.572Z
+        - commits:
+            - subject: Delete .github directory
+              hash: d4d32ee5b021b1dd8864e2a2285530f1f4a85829
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: dfunckt
+              nested: []
+          version: open-balena-base-11.3.1
+          date: 2021-06-30T15:35:52.543Z
+        - commits:
+            - subject: Update nodejs to 14.17.1
+              hash: e0471dbbe042d4416ad3bba67ea50dcc4565de9f
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+                signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+              author: Trong Nghia Nguyen
+              nested: []
+          version: open-balena-base-11.3.0
+          date: 2021-06-30T03:47:56.917Z
+    - subject: Delete .github directory
+      hash: e9456f73d102c3545c92938ee35e0de01a8048aa
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: dfunckt
+      nested: []
+  version: 2.16.2
+  date: 2021-07-05T16:09:56.691Z
+- commits:
     - subject: Update open-balena-base to 11.2.0
       hash: 7430397219bd751d3cbfcc22e99497b28d21fe4e
       body: |
