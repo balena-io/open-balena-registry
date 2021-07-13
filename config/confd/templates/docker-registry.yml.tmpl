@@ -3,7 +3,7 @@ log:
   level: warn
 http:
   addr: :80
-  host: https://{{getenv "BALENA_REGISTRY2_HOST"}}
+  host: https://{{getenv "REGISTRY2_HOST"}}
   secret: {{getenv "REGISTRY2_SECRETKEY"}}
   headers:
     X-Content-Type-Options: [nosniff]
@@ -16,9 +16,9 @@ proxy:
 {{else}}
 auth:
   token:
-    service: {{getenv "BALENA_REGISTRY2_HOST"}}
-    realm: {{getenv "BALENA_TOKEN_AUTH_REALM"}}
-    issuer: {{getenv "BALENA_TOKEN_AUTH_ISSUER"}}
+    service: {{getenv "REGISTRY2_HOST"}}
+    realm: {{getenv "REGISTRY2_TOKEN_AUTH_REALM"}}
+    issuer: {{getenv "REGISTRY2_TOKEN_AUTH_ISSUER"}}
     rootcertbundle: /certs/registry-tokenauth.crt
 {{end}}
 
