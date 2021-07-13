@@ -1,4 +1,16 @@
 - commits:
+    - subject: Remove BALENA_ env var prefix
+      hash: 6d712b4709156c4157ebbf5d5825483e97ba69dc
+      body: |
+        * allow deploymet into balenaCloud
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: ab77
+      nested: []
+  version: 2.16.3
+  date: 2021-07-13T15:21:39.938Z
+- commits:
     - subject: Update open-balena-base to 11.3.2
       hash: a5063ed465b23a036a77da0d931ca5247f6ca49f
       body: |
