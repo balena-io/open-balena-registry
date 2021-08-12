@@ -1,4 +1,51 @@
 - commits:
+    - subject: Update open-balena-base to 11.3.8
+      hash: 110690bbc2aeb6655382273d1af53b80825b0e84
+      body: |
+        Update open-balena-base from 11.3.5 to 11.3.8
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested:
+        - commits:
+            - subject: Update nodejs to 14.17.5
+              hash: f53fdc6772da9353cd131053f350f266940997f5
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Pagan Gazzard
+              nested: []
+          version: open-balena-base-11.3.8
+          date: 2021-08-12T15:43:43.425Z
+        - commits:
+            - subject: Use DNS_TLD internally
+              hash: 90ce2fde5004cf4f3e69af4eaac19947b024b9c3
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: ab77
+              nested: []
+          version: open-balena-base-11.3.7
+          date: 2021-07-30T19:18:49.722Z
+        - commits:
+            - subject: Accept DNS_TLD in place of BALENA_TLD
+              hash: a64345d362589ee037d982cb9481e476e72fb2f2
+              body: |
+                * backwards compatible with existing BALENA_TLD env var
+                * Handle DNS_TLD prefix (override BALENA_TLD if present)
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: ab77
+              nested: []
+          version: open-balena-base-11.3.6
+          date: 2021-07-30T18:19:56.513Z
+  version: 2.16.6
+  date: 2021-08-12T16:28:40.289Z
+- commits:
     - subject: Update open-balena-base to 11.3.5
       hash: 3206869dccc68a6f9a125c0113c73214c9fb5a88
       body: |
