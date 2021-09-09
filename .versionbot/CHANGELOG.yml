@@ -1,4 +1,17 @@
 - commits:
+    - subject: >-
+        Update open-balena-base to 12.0.3 Update open-balena-base from 12.0.2 to
+        12.0.3
+      hash: d1f3e6c8a1d6a1b3d71af186fc3c2bd2eea89af4
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: ab77
+      nested: []
+  version: 2.18.2
+  date: 2021-09-07T16:55:29.792Z
+- commits:
     - subject: Update open-balena-base to 12.0.2
       hash: f503b82b7fb2bee4b6f6e1e9e444b194edec3c5e
       body: |
