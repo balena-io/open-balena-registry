@@ -19,7 +19,7 @@ auth:
     service: {{getenv "REGISTRY2_HOST"}}
     realm: {{getenv "REGISTRY2_TOKEN_AUTH_REALM"}}
     issuer: {{getenv "REGISTRY2_TOKEN_AUTH_ISSUER"}}
-    rootcertbundle: /certs/registry-tokenauth.crt
+    rootcertbundle: /tmp/registry-tokenauth.crt
 {{end}}
 
 storage:
