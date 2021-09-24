@@ -20,5 +20,5 @@ UMask=007
 LimitNOFILE=65535
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=basic.target
 Alias=redis.service

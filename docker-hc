@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -a
+
+[[ -f /etc/docker.env ]] && source /etc/docker.env
+
+(systemctl is-active balena-registry \
+  && curl -I --fail localhost) || exit $?
+
+[[ -s ${NODE_EXTRA_CA_CERTS} ]] && true | openssl s_client \
+  -connect "${REGISTRY2_HOST}":443 \
+  -CAfile "${NODE_EXTRA_CA_CERTS}" || true
