@@ -53,8 +53,14 @@ storage:
     rootdirectory: {{getenv "REGISTRY2_STORAGEPATH"}}
 {{end}}
 
-{{if getenv "REGISTRY2_S3_CLOUDFRONT_ENDPOINT"}}
 middleware:
+  registry:
+    - name: balena
+      options: {}
+  repository:
+    - name: balena
+      options: {}
+{{if getenv "REGISTRY2_S3_CLOUDFRONT_ENDPOINT"}}
   storage:
     - name: cloudfront
       options:

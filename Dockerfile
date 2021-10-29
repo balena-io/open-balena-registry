@@ -1,3 +1,14 @@
+
+FROM golang:1.17 AS registry
+WORKDIR /src
+ARG REGISTRY_VERSION=main
+RUN apt-get update && apt-get install patch && rm -rf /var/lib/apt/lists/*
+RUN --mount=type=bind,src=./0001-wip-balena-middleware-patch.patch,dst=/balena.patch,ro \
+    wget -q -O- https://github.com/distribution/distribution/archive/${REGISTRY_VERSION}.tar.gz \
+      | tar xzf - --strip-components=1 \
+    && grep -v '^diff\|^index' /balena.patch | patch -p1 \
+    && make bin/registry
+
 FROM balena/open-balena-base:v12.2.0
 
 EXPOSE 80
@@ -8,14 +19,7 @@ RUN apt-get update \
 		redis-server \
 	&& rm -rf /var/lib/apt/lists/*
 
-# registry 2.7.1
-ENV REGISTRY_VERSION 0b6ea3ba50b65563600a717f07db4cfa6f18f957
-ENV REGISTRY_SHA256 d494c104bc9aa4b39dd473f086dbe0a5bdf370f1cb4a7b9bb2bd38b5e58bb106
-
-RUN URL="https://github.com/docker/distribution-library-image/raw/${REGISTRY_VERSION}/amd64/registry" \
-	&& wget -qO /usr/local/bin/docker-registry "$URL" \
-	&& chmod a+x /usr/local/bin/docker-registry \
-	&& echo "${REGISTRY_SHA256}" /usr/local/bin/docker-registry | sha256sum -c -
+COPY --from=registry /src/bin/registry /usr/local/bin/docker-registry
 
 COPY config/services/ /etc/systemd/system/
 

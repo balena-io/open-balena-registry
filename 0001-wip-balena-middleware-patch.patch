@@ -1,0 +1,85 @@
+From a399498c79bab7db3531f580d5cb5b0b1f2c5efe Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Robert=20G=C3=BCnzler?= <r@gnzler.io>
+Date: Fri, 29 Oct 2021 18:51:32 +0200
+Subject: [PATCH] wip: balena middleware patch
+
+---
+ cmd/registry/main.go          |  2 ++
+ registry/balena/middleware.go | 52 +++++++++++++++++++++++++++++++++++
+ 2 files changed, 54 insertions(+)
+ create mode 100644 registry/balena/middleware.go
+
+diff --git a/cmd/registry/main.go b/cmd/registry/main.go
+index 09a09260..71dd0a43 100644
+--- a/cmd/registry/main.go
++++ b/cmd/registry/main.go
+@@ -18,6 +18,8 @@ import (
+ 	_ "github.com/distribution/distribution/v3/registry/storage/driver/oss"
+ 	_ "github.com/distribution/distribution/v3/registry/storage/driver/s3-aws"
+ 	_ "github.com/distribution/distribution/v3/registry/storage/driver/swift"
++
++	_ "github.com/distribution/distribution/v3/registry/balena"
+ )
+ 
+ func main() {
+diff --git a/registry/balena/middleware.go b/registry/balena/middleware.go
+new file mode 100644
+index 00000000..e4f587d9
+--- /dev/null
++++ b/registry/balena/middleware.go
+@@ -0,0 +1,52 @@
++package balena
++
++import (
++	"context"
++	"errors"
++	"regexp"
++
++	"github.com/distribution/distribution/v3"
++	dcontext "github.com/distribution/distribution/v3/context"
++	registrymw "github.com/distribution/distribution/v3/registry/middleware/registry"
++	repositorymw "github.com/distribution/distribution/v3/registry/middleware/repository"
++)
++
++var registry distribution.Namespace
++
++// this is needed to get a handle on the namespace
++func newRegistryMiddleware(ctx context.Context, ns distribution.Namespace, options map[string]interface{}) (distribution.Namespace, error) {
++	registry = ns
++	return ns, nil
++}
++
++var balenaNameRegexp = regexp.MustCompile(`org/([a-z0-9_-]+)/app/([a-z0-9_-]+)`)
++
++func newRepoMiddleware(ctx context.Context, repo distribution.Repository, options map[string]interface{}) (distribution.Repository, error) {
++	ref := repo.Named().Name()
++
++	// direct access, skip further parsing...
++	if ref[:3] == "v2/" {
++		dcontext.GetLogger(ctx).Warnf("balena middleware: direct access: %s", ref)
++		return repo, nil
++	}
++
++	match := balenaNameRegexp.FindStringSubmatch(ref)
++	if len(match) != 3 {
++		dcontext.GetLogger(ctx).Errorf("balena middleware: rejected: %s", ref)
++		return nil, errors.New("rejected")
++		// return repo, nil
++	}
++
++	org, app := match[1], match[2]
++	dcontext.GetLogger(ctx).Warnf("balena middleware: org=%q, app=%q", org, app)
++
++	// TODO: retrieve release ref and forward
++
++	// return repo, nil
++	return nil, errors.New("success")
++}
++
++func init() {
++	registrymw.Register("balena", registrymw.InitFunc(newRegistryMiddleware))
++	repositorymw.Register("balena", repositorymw.InitFunc(newRepoMiddleware))
++}
+-- 
+2.32.0
+
