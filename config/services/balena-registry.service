@@ -5,6 +5,9 @@ After=confd.service
 StartLimitIntervalSec=0
 
 [Service]
+LimitNOFILE=1048576
+
+[Service]
 StandardOutput=journal+console
 StandardError=journal+console
 WorkingDirectory=/usr/src/app
