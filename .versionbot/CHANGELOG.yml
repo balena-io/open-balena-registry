@@ -1,4 +1,15 @@
 - commits:
+    - subject: Increase soft-limit of maximum number of open files
+      hash: d1f58d44a7d57797a3f2cf2602ceab29ece66415
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Akis Kesoglou
+      nested: []
+  version: 2.21.0
+  date: 2021-11-15T15:39:46.822Z
+- commits:
     - subject: Update open-balena-base to 13.0.0
       hash: 098414561c878800428194d68ec17364bc733e7b
       body: |
