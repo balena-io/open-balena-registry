@@ -1,4 +1,15 @@
 - commits:
+    - subject: Add configuration for the redis cache pool
+      hash: 6fa38c9b4a60b74ff30b35cc447799a4301a79a7
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Pagan Gazzard
+      nested: []
+  version: 2.23.0
+  date: 2021-12-31T14:34:04.381Z
+- commits:
     - subject: Update open-balena-base to 13.0.3
       hash: a7b6c1e42bd55a302e3b30ed0473b17cdd46ac3c
       body: |
