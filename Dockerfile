@@ -8,14 +8,14 @@ RUN apt-get update \
 		redis-server \
 	&& rm -rf /var/lib/apt/lists/*
 
-# registry 2.7.1
-ENV REGISTRY_VERSION 0b6ea3ba50b65563600a717f07db4cfa6f18f957
-ENV REGISTRY_SHA256 d494c104bc9aa4b39dd473f086dbe0a5bdf370f1cb4a7b9bb2bd38b5e58bb106
+ENV REGISTRY_VERSION 2.8.0
+ENV REGISTRY_SHA256 7b2ebc3d67e21987b741137dc230d0f038b362ba21e02f226150ff5577f92556
 
-RUN URL="https://github.com/docker/distribution-library-image/raw/${REGISTRY_VERSION}/amd64/registry" \
-	&& wget -qO /usr/local/bin/docker-registry "$URL" \
-	&& chmod a+x /usr/local/bin/docker-registry \
-	&& echo "${REGISTRY_SHA256}" /usr/local/bin/docker-registry | sha256sum -c -
+RUN curl -SLO "https://github.com/distribution/distribution/releases/download/v${REGISTRY_VERSION}/registry_${REGISTRY_VERSION}_linux_amd64.tar.gz" && \
+	echo "${REGISTRY_SHA256} registry_${REGISTRY_VERSION}_linux_amd64.tar.gz" | sha256sum -c - && \
+	tar xz -f "registry_${REGISTRY_VERSION}_linux_amd64.tar.gz" && \
+	mv registry docker-registry && \
+	rm "registry_${REGISTRY_VERSION}_linux_amd64.tar.gz"
 
 COPY config/services/ /etc/systemd/system/
 
