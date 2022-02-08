@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix path
+      hash: a27deb05acf812b3fb7e2f38cbf86befe74a9fc7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested: []
+  version: 2.24.1
+  title: "'Fix path'"
+  date: 2022-02-08T15:15:09.374Z
+- commits:
     - subject: Update registry to v2.8.0
       hash: dc6c031c7afe54d8470393985c785a51bc8398df
       body: ""
