@@ -14,7 +14,7 @@ ENV REGISTRY_SHA256 7b2ebc3d67e21987b741137dc230d0f038b362ba21e02f226150ff5577f9
 RUN curl -SLO "https://github.com/distribution/distribution/releases/download/v${REGISTRY_VERSION}/registry_${REGISTRY_VERSION}_linux_amd64.tar.gz" && \
 	echo "${REGISTRY_SHA256} registry_${REGISTRY_VERSION}_linux_amd64.tar.gz" | sha256sum -c - && \
 	tar xz -f "registry_${REGISTRY_VERSION}_linux_amd64.tar.gz" && \
-	mv registry docker-registry && \
+	mv registry /usr/local/bin/docker-registry && \
 	rm "registry_${REGISTRY_VERSION}_linux_amd64.tar.gz"
 
 COPY config/services/ /etc/systemd/system/
