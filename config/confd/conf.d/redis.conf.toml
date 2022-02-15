@@ -6,4 +6,3 @@ keys = [
   "REGISTRY2_CACHE_MAXMEMORY_POLICY",
 ]
 mode = "0644"
-reload_cmd = "chown redis:redis /etc/redis/redis.conf; systemctl restart redis-server"

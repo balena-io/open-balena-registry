@@ -1,4 +1,4 @@
-FROM balena/open-balena-base:v13.0.4
+FROM balena/open-balena-base:no-systemd-13.0.4
 
 EXPOSE 80
 
@@ -21,4 +21,5 @@ COPY config/services/ /etc/systemd/system/
 
 COPY . /usr/src/app
 
-RUN systemctl enable balena-registry.service
+CMD [ "/usr/src/app/entry.sh" ]
+ENTRYPOINT [ "/usr/src/app/entry.sh" ]
