@@ -6,6 +6,8 @@ RUN apt-get update \
 	&& apt-get install \
 		musl \
 		redis-server \
+		rsyslog \
+		rsyslog-gnutls \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV REGISTRY_VERSION 2.8.0
