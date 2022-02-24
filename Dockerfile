@@ -1,4 +1,4 @@
-FROM balena/open-balena-base:v13.2.1
+FROM balena/open-balena-base:v13.2.3
 
 EXPOSE 80
 
@@ -8,8 +8,8 @@ RUN apt-get update \
 		redis-server \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV REGISTRY_VERSION 2.8.0
-ENV REGISTRY_SHA256 7b2ebc3d67e21987b741137dc230d0f038b362ba21e02f226150ff5577f92556
+ENV REGISTRY_VERSION 2.8.1
+ENV REGISTRY_SHA256 f1a376964912a5fd7d588107ebe5185da77803244e15476d483c945959347ee2
 
 RUN curl -SLO "https://github.com/distribution/distribution/releases/download/v${REGISTRY_VERSION}/registry_${REGISTRY_VERSION}_linux_amd64.tar.gz" && \
 	echo "${REGISTRY_SHA256} registry_${REGISTRY_VERSION}_linux_amd64.tar.gz" | sha256sum -c - && \
