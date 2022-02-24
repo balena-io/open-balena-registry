@@ -1,4 +1,41 @@
 - commits:
+    - subject: Added rsyslog startup Execute rsyslogd to start up system logging
+      hash: a1f373d79d876465c625e36b6e0048593e358359
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Robbe Haesendonck
+      nested: []
+    - subject: Added logentries Installed rsyslog and added back logentries.
+      hash: cfb7657b6ce1a01998580416fcfbf448ee88ac70
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Robbe Haesendonck
+      nested: []
+    - subject: Added redis startup script Made redis start up also if the environment
+        variables match
+      hash: 9f39ffaa78c958614a7011d7cd63a0d6120ecc27
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Robbe Haesendonck
+      nested: []
+    - subject: Removed systemd Removed systemd from registry container.
+      hash: e75637a4483cb71a3f3bbbf3ed803a30df3a6294
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Robbe Haesendonck
+      nested: []
+  version: 2.25.0
+  title: "'Removed systemd'"
+  date: 2022-02-24T15:28:15.280Z
+- commits:
     - subject: Update open-balena-base to 13.1.0
       hash: 15d378c6e0309d4ca2b4527193589550ae85399a
       body: |
