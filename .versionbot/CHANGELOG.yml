@@ -1,4 +1,16 @@
 - commits:
+    - subject: Do not use cloudfront if the request is from AWS ips
+      hash: e7809a2402c4f7ac8dd5ae8820cfea85bfe47e18
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested: []
+  version: 2.24.5
+  title: "'Do not use cloudfront if the request is from AWS ips'"
+  date: 2022-04-21T14:35:57.250Z
+- commits:
     - subject: Update open-balena-base to 13.2.3 Update open-balena-base from 13.2.1
         to 13.2.3
       hash: 361665cb3f1e5bd824cce25e6bf2b4a2cbe6aacf
