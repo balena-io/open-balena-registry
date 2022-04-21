@@ -58,7 +58,7 @@ middleware:
   storage:
     - name: cloudfront
       options:
-        ipfilteredby: none
+        ipfilteredby: aws
         baseurl: https://{{getenv "REGISTRY2_S3_CLOUDFRONT_ENDPOINT"}}/
         privatekey: /etc/ssl/private/cloudfront-pk.pem
         keypairid: {{getenv "REGISTRY2_S3_CLOUDFRONT_KEYPAIR_ID"}}
