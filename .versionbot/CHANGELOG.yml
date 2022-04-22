@@ -1,4 +1,16 @@
 - commits:
+    - subject: Allow configuring log level and default to `error` level
+      hash: a11e9fcc5a391b9e86b67e85d115fde2a5cd1cc1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested: []
+  version: 2.24.6
+  title: "'Allow configuring log level and default to  level'"
+  date: 2022-04-22T14:23:52.424Z
+- commits:
     - subject: Do not use cloudfront if the request is from AWS ips
       hash: e7809a2402c4f7ac8dd5ae8820cfea85bfe47e18
       body: ""
