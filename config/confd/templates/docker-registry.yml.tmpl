@@ -1,6 +1,6 @@
 version: 0.1
 log:
-  level: warn
+  level: {{getenv "REGISTRY2_LOG_LEVEL" "error"}}
 http:
   addr: :80
   host: https://{{getenv "REGISTRY2_HOST"}}
