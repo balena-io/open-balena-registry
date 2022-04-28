@@ -35,6 +35,11 @@ storage:
   delete:
     enabled: true
 {{end}}
+{{if eq (getenv "REGISTRY2_DISABLE_UPLOAD_PURGING" "false") "true"}}
+  maintenance:
+    uploadpurging:
+      enabled: false
+{{end}}
 {{if getenv "REGISTRY2_S3_BUCKET"}}
   s3:
     accesskey: {{getenv "REGISTRY2_S3_KEY"}}
