@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add config to disable upload purging
+      hash: 7a2b0432eb32f0d77b38aeb3e192c315a618806f
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Pagan Gazzard
+      nested: []
+  version: 2.25.0
+  title: "'Add config to disable upload purging'"
+  date: 2022-04-28T12:54:04.907Z
+- commits:
     - subject: Allow configuring log level and default to `error` level
       hash: a11e9fcc5a391b9e86b67e85d115fde2a5cd1cc1
       body: ""
