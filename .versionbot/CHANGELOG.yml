@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update open-balena-base to 13.3.0
+      hash: c8d781bbd41fb2f2b3baf892538460ceee98dae4
+      body: |
+        Update open-balena-base from 13.2.3 to 13.3.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested:
+        - commits:
+            - subject: Update nodejs to 16.15.0 and npm to 8.8.0
+              hash: a7454fb62d845e444e3e798c577a264979da574a
+              body: ""
+              footer:
+                Change-type: minor
+                change-type: minor
+              author: Pagan Gazzard
+              nested: []
+          version: open-balena-base-13.3.0
+          title: "'Update nodejs to 16.15.0 and npm to 8.8.0'"
+          date: 2022-05-02T16:14:06.385Z
+  version: 2.25.1
+  title: "'Update open-balena-base to 13.3.0'"
+  date: 2022-05-03T08:03:06.660Z
+- commits:
     - subject: Add config to disable upload purging
       hash: 7a2b0432eb32f0d77b38aeb3e192c315a618806f
       body: ""
