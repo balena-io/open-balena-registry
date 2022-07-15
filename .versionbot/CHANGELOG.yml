@@ -1,4 +1,19 @@
 - commits:
+    - subject: Increase the default max idle redis connections to 256
+      hash: 993a9b1d08f59728779042e068ec46d191bbeb4d
+      body: |
+        This brings it more in line with the default of 1024 max active
+        connections so that connections aren't killed as quickly during
+        spiky conditions
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested: []
+  version: 2.25.5
+  title: "'Increase the default max idle redis connections to 256'"
+  date: 2022-07-15T13:30:13.793Z
+- commits:
     - subject: Update open-balena-base to 13.4.0
       hash: 922eea37c41a2a508916926948437b2f3e8a7342
       body: |
