@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v13.5.1
+      hash: 8b03c38a2043575dc77d2cadff8177cc083e84e7
+      body: |
+        Update balena/open-balena-base to 13.5.1
+
+        Update balena/open-balena-base from 13.4.0 to 13.5.1
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Renovate Bot
+      nested: []
+  version: 2.26.0
+  title: "'Update balena/open-balena-base Docker tag to v13.5.1'"
+  date: 2022-09-12T12:05:17.768Z
+- commits:
     - subject: Increase the default max idle redis connections to 256
       hash: 993a9b1d08f59728779042e068ec46d191bbeb4d
       body: |
