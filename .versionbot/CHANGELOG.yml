@@ -1,4 +1,16 @@
 - commits:
+    - subject: Switch from balenaCI to flowzone
+      hash: 30324db4aea88e2f7d4ad822acbe34d9d66edd43
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested: []
+  version: 2.26.1
+  title: ""
+  date: 2022-09-15T20:14:19.765Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v13.5.1
       hash: 8b03c38a2043575dc77d2cadff8177cc083e84e7
       body: |
