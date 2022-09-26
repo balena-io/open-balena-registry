@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v13.5.2
+      hash: 87b868fef6c50a6066302127dc6a77a176de1a4a
+      body: |
+        Update balena/open-balena-base to 13.5.2
+
+        Update balena/open-balena-base from 13.5.1 to 13.5.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.26.3
+  title: ""
+  date: 2022-09-26T16:33:14.271Z
+- commits:
     - subject: Delete redundant .resinci.yml
       hash: dcf7882a6de39ec80d3f2af8ebfe8b3a8493a1cd
       body: ""
