@@ -1,6 +1,0 @@
----
-docker:
-  builds:
-    - path: .
-      dockerfile: Dockerfile
-      docker_repo: balena/open-balena-registry
