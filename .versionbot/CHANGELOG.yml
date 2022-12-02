@@ -1,4 +1,16 @@
 - commits:
+    - subject: Enable external contributors
+      hash: d436aadf3b95b4428d917e6fa99dd441d871b317
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: ab77
+      nested: []
+  version: 2.29.1
+  title: ""
+  date: 2022-12-02T00:05:31.770Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v14.1.0
       hash: a903a09ec7464742f327e73b38ceac1b0a41df05
       body: |
