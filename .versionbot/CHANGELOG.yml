@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v14.1.2
+      hash: 9d61b9d9577be381bdbcf89dafc9b50156fc07fc
+      body: |
+        Update balena/open-balena-base to 14.1.2
+
+        Update balena/open-balena-base from 14.1.0 to 14.1.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.29.2
+  title: ""
+  date: 2022-12-07T03:20:18.001Z
+- commits:
     - subject: Enable external contributors
       hash: d436aadf3b95b4428d917e6fa99dd441d871b317
       body: ""
