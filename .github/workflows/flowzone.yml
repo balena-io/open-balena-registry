@@ -21,3 +21,6 @@ jobs:
     secrets: inherit
     with:
       docker_images: balena/open-balena-registry
+      repo_config: true
+      repo_description: "Docker image storage backend for openBalena"
+      repo_homepage: "balena.io/open"
