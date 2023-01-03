@@ -1,4 +1,4 @@
-FROM balena/open-balena-base:no-systemd-13.0.4
+FROM balena/open-balena-base:no-systemd-14.1.4
 
 EXPOSE 80
 

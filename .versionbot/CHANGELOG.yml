@@ -1,4 +1,161 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v14.1.4
+      hash: 634df70b33cf8aa7b438491fa29a9b6ee1bca642
+      body: |
+        Update balena/open-balena-base to 14.1.4
+
+        Update balena/open-balena-base from 14.1.3 to 14.1.4
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.29.4
+  title: ""
+  date: 2022-12-14T02:23:28.601Z
+- commits:
+    - subject: Update balena/open-balena-base Docker tag to v14.1.3
+      hash: c8e17f6b9c87683368e96ac1d18c4d80315fd6bb
+      body: |
+        Update balena/open-balena-base to 14.1.3
+
+        Update balena/open-balena-base from 14.1.2 to 14.1.3
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.29.3
+  title: ""
+  date: 2022-12-08T20:52:57.143Z
+- commits:
+    - subject: Update balena/open-balena-base Docker tag to v14.1.2
+      hash: 9d61b9d9577be381bdbcf89dafc9b50156fc07fc
+      body: |
+        Update balena/open-balena-base to 14.1.2
+
+        Update balena/open-balena-base from 14.1.0 to 14.1.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.29.2
+  title: ""
+  date: 2022-12-07T03:20:18.001Z
+- commits:
+    - subject: Enable external contributors
+      hash: d436aadf3b95b4428d917e6fa99dd441d871b317
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: ab77
+      nested: []
+  version: 2.29.1
+  title: ""
+  date: 2022-12-02T00:05:31.770Z
+- commits:
+    - subject: Update balena/open-balena-base Docker tag to v14.1.0
+      hash: a903a09ec7464742f327e73b38ceac1b0a41df05
+      body: |
+        Update balena/open-balena-base to 14.1.0
+
+        Update balena/open-balena-base from 14.0.1 to 14.1.0
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Renovate Bot
+      nested: []
+  version: 2.29.0
+  title: ""
+  date: 2022-11-24T12:12:59.569Z
+- commits:
+    - subject: Update balena/open-balena-base Docker tag to v14.0.1
+      hash: d7b5e307403a8cb0928d1da77d80b5072c87a417
+      body: |
+        Update balena/open-balena-base to 14.0.1
+
+        Update balena/open-balena-base from 14.0.0 to 14.0.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.28.1
+  title: ""
+  date: 2022-11-09T05:10:40.436Z
+- commits:
+    - subject: Update open-balena-base to 14.0.0
+      hash: 4a1d43e7b42e42c03d6ce0c12af4e8d77c2d06ed
+      body: |
+        Update open-balena-base from 13.6.1 to 14.0.0
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Pagan Gazzard
+      nested:
+        - commits:
+            - subject: Update to nodejs 18
+              hash: 3d9cffff7898abf4d82b3f699b673bee76ea3e66
+              body: ""
+              footer:
+                Change-type: major
+                change-type: major
+              author: Pagan Gazzard
+              nested: []
+          version: open-balena-base-14.0.0
+          title: ""
+          date: 2022-10-27T11:48:16.274Z
+  version: 2.28.0
+  title: ""
+  date: 2022-10-27T13:01:31.638Z
+- commits:
+    - subject: Update balena/open-balena-base Docker tag to v13.6.1
+      hash: a6b57b1f415cf3318a77d30cb7d6ff2fe782c1c2
+      body: |
+        Update balena/open-balena-base to 13.6.1
+
+        Update balena/open-balena-base from 13.6.0 to 13.6.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.27.1
+  title: ""
+  date: 2022-10-24T09:55:06.196Z
+- commits:
+    - subject: Update balena/open-balena-base Docker tag to v13.6.0
+      hash: a3f5d1b669849d35a7716b6eabf86f95e4739a0f
+      body: |
+        Update balena/open-balena-base to 13.6.0
+
+        Update balena/open-balena-base from 13.5.3 to 13.6.0
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Renovate Bot
+      nested: []
+  version: 2.27.0
+  title: ""
+  date: 2022-10-14T18:51:20.927Z
+- commits:
+    - subject: Update balena/open-balena-base Docker tag to v13.5.3
+      hash: 62493e03bad2b106981a48c1072657b3e282aa7e
+      body: |
+        Update balena/open-balena-base to 13.5.3
+
+        Update balena/open-balena-base from 13.5.2 to 13.5.3
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.26.4
+  title: ""
+  date: 2022-10-14T18:15:09.473Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v13.5.2
       hash: 87b868fef6c50a6066302127dc6a77a176de1a4a
       body: |
@@ -491,9 +648,9 @@
             - subject: Fix configuration for non-BoB deployments
               hash: be5d9722d47b65ca511cfb66ab13ed1f3ddff372
               body: >
-                The default value on the BALENA_DEVICE_UUID variable forced all
-                code paths that used to run optionally depending on whether
-                deployment was on a balenaOS device to run.
+                The default value on the BALENA_DEVICE_UUID variable forced all code paths
+                that used to run optionally depending on whether deployment was
+                on a balenaOS device to run.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -520,8 +677,8 @@
             - subject: Auto-configure balenaMachine(bob)
               hash: efb8da155b7bedec44558dfcd55cb6b535099c01
               body: >
-                + allows balenaMachine(s)/BoB(s) to automatically configure
-                itself (without bob-cli)
+                + allows balenaMachine(s)/BoB(s) to automatically configure itself
+                (without bob-cli)
 
                 + auto-configuration requires balena-ca and cert-manager to do the heavy lifting prior
 
@@ -835,8 +992,8 @@
             - subject: Add parallel HOSTs and env vars
               hash: 7ef7a8e470f195afec8a104e837f901c9f0d1044
               body: >
-                * allows removal of BALENA_ prefixes across all products and
-                services (aside from reserved within balenaOS/Supervisor)
+                * allows removal of BALENA_ prefixes across all products and services
+                (aside from reserved within balenaOS/Supervisor)
 
                 * made balena-root-ca service a dependency of confd.service
               footer:
@@ -1043,9 +1200,9 @@
     - subject: Add ability to configure registry as a Hub proxy
       hash: 7b3fa83258afa8f824678294b5258b5684e6f25d
       body: >
-        To enable proxying of Docker Hub, set `REGISTRY2_PROXY_ENABLED` to
-        `true`. This will cache public images pulled through this instance. To
-        access private images, also set `REGISTRY2_PROXY_USERNAME` and
+        To enable proxying of Docker Hub, set `REGISTRY2_PROXY_ENABLED` to `true`.
+        This will cache public images pulled through this instance. To access
+        private images, also set `REGISTRY2_PROXY_USERNAME` and
         `REGISTRY2_PROXY_PASSWORD` to appropriate values.
 
 
@@ -1606,8 +1763,7 @@
             - subject: Add a base image without systemd
               hash: d7e44872d9594b9ef0557f78b8f38c6e449bbe54
               body: >
-                Also configures circleCI to publish no-systemd variant in
-                parallel.
+                Also configures circleCI to publish no-systemd variant in parallel.
               footer:
                 Change-type: minor
                 change-type: minor
@@ -1682,8 +1838,8 @@
     - subject: "service: Fix confd template for using S3 storage"
       hash: d1bf60052729ecd705c9c0f96a5460c9d0c5acdf
       body: >
-        - the `exists` condition doesn't work for an ENV backend, so just check
-        it has a value
+        - the `exists` condition doesn't work for an ENV backend, so just check it
+        has a value
 
         - the registry service MUST start after the base' balena-root-ca service has completed, otherwise
           it may not trust the certificate used by the S3 endpoint.
@@ -1810,8 +1966,8 @@
     - subject: Add ability to configure the S3 endpoint
       hash: 1eaee4a121b37e9f7957e5b9cdca068b6d5c3534
       body: >
-        This is useful when deploying against an S3-like service for storage,
-        eg. Minio.
+        This is useful when deploying against an S3-like service for storage, eg.
+        Minio.
       footer:
         Change-type: minor
         change-type: minor
@@ -2282,8 +2438,8 @@
 - commits:
     - author: Akis Kesoglou
       body: >-
-        This update includes a security fix for CVE-2017-11468. Release notes
-        from github/docker/distribution for this version:
+        This update includes a security fix for CVE-2017-11468. Release notes from
+        github/docker/distribution for this version:
 
         This release is a special security release to address an issue allowing an attacker to force arbitrarily-sized memory allocations in a registry instance through the manifest endpoint. The problem has been mitigated by limiting the size of reads for image manifest content.
       footers:
