@@ -1,4 +1,41 @@
 - commits:
+    - subject: Added rsyslog startup Execute rsyslogd to start up system logging
+      hash: a1f373d79d876465c625e36b6e0048593e358359
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Robbe Haesendonck
+      nested: []
+    - subject: Added logentries Installed rsyslog and added back logentries.
+      hash: cfb7657b6ce1a01998580416fcfbf448ee88ac70
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Robbe Haesendonck
+      nested: []
+    - subject: Added redis startup script Made redis start up also if the environment
+        variables match
+      hash: 9f39ffaa78c958614a7011d7cd63a0d6120ecc27
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Robbe Haesendonck
+      nested: []
+    - subject: Removed systemd Removed systemd from registry container.
+      hash: e75637a4483cb71a3f3bbbf3ed803a30df3a6294
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Robbe Haesendonck
+      nested: []
+  version: 2.30.0
+  title: ""
+  date: 2023-01-03T11:04:11.468Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v14.1.4
       hash: 634df70b33cf8aa7b438491fa29a9b6ee1bca642
       body: |
