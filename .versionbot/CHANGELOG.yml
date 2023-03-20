@@ -1,4 +1,18 @@
 - commits:
+    - subject: Build multiarch images for amd64 and arm64
+      hash: 2197f49870903eea82e66e5a37a438163b602810
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.33.2
+  title: ""
+  date: 2023-03-20T19:41:37.097Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v14.6.1
       hash: 113a4132cda4c9eb382158ae068f27a790c55312
       body: |
