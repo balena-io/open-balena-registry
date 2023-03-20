@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v14.7.0
+      hash: 972fc04cb596d76f2759f53ebad6e743ca103ff7
+      body: |
+        Update balena/open-balena-base from 14.6.1 to 14.7.0
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Renovate Bot
+      nested: []
+  version: 2.34.0
+  title: ""
+  date: 2023-03-20T21:03:11.744Z
+- commits:
     - subject: Build multiarch images for amd64 and arm64
       hash: 2197f49870903eea82e66e5a37a438163b602810
       body: ""
