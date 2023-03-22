@@ -1,6 +1,7 @@
 FROM balena/open-balena-base:v14.7.1
 
 EXPOSE 80
+EXPOSE 81
 
 # hadolint ignore=DL3008
 RUN apt-get update \
