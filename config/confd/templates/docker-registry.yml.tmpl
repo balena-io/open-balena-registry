@@ -7,6 +7,13 @@ http:
   secret: {{getenv "REGISTRY2_SECRETKEY"}}
   headers:
     X-Content-Type-Options: [nosniff]
+{{if eq (getenv "REGISTRY2_DEBUG_ENABLED" "false") "true"}}
+  debug:
+    addr: :81
+    prometheus:
+      enabled: true
+      path: /metrics
+{{end}}
 
 {{if eq (getenv "REGISTRY2_PROXY_ENABLED" "false") "true"}}
 proxy:
