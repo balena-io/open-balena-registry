@@ -1,4 +1,25 @@
 - commits:
+    - subject: Adds the option to enable the debug server.
+      hash: d6c3df5403095b863d48bad4bdf77fac0895023b
+      body: |
+        The `REGISTRY2_DEBUG_ENABLED` environment variable
+        can be used to enable the registry's debug server.
+
+        The debug server endpoint exposes the registry
+        metrics that can be scraped by Prometheus for
+        monitoring.  The debug endpoint can also be used
+        for profiling.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Carlo Miguel F. Cruz <carloc@balena.io>
+        signed-off-by: Carlo Miguel F. Cruz <carloc@balena.io>
+      author: Carlo Miguel F. Cruz
+      nested: []
+  version: 2.34.2
+  title: ""
+  date: 2023-03-22T13:56:35.696Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v14.7.1
       hash: fcb260e62441fe80c68423d8eeab5f017023e702
       body: |
