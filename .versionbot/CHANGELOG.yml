@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v14.9.0
+      hash: 7490adbbf2a3d6ac24f8dc7543fd75dd34419a1f
+      body: |
+        Update balena/open-balena-base from 14.8.0 to 14.9.0
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Renovate Bot
+      nested: []
+  version: 2.37.0
+  title: ""
+  date: 2023-05-01T16:14:08.481Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v14.8.0
       hash: e53e9a842e224cde69c6ca5ed3bac7669c8201e4
       body: |
@@ -925,9 +938,9 @@
             - subject: Fix configuration for non-BoB deployments
               hash: be5d9722d47b65ca511cfb66ab13ed1f3ddff372
               body: >
-                The default value on the BALENA_DEVICE_UUID variable forced all code paths
-                that used to run optionally depending on whether deployment was
-                on a balenaOS device to run.
+                The default value on the BALENA_DEVICE_UUID variable forced all
+                code paths that used to run optionally depending on whether
+                deployment was on a balenaOS device to run.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -954,8 +967,8 @@
             - subject: Auto-configure balenaMachine(bob)
               hash: efb8da155b7bedec44558dfcd55cb6b535099c01
               body: >
-                + allows balenaMachine(s)/BoB(s) to automatically configure itself
-                (without bob-cli)
+                + allows balenaMachine(s)/BoB(s) to automatically configure
+                itself (without bob-cli)
 
                 + auto-configuration requires balena-ca and cert-manager to do the heavy lifting prior
 
@@ -1269,8 +1282,8 @@
             - subject: Add parallel HOSTs and env vars
               hash: 7ef7a8e470f195afec8a104e837f901c9f0d1044
               body: >
-                * allows removal of BALENA_ prefixes across all products and services
-                (aside from reserved within balenaOS/Supervisor)
+                * allows removal of BALENA_ prefixes across all products and
+                services (aside from reserved within balenaOS/Supervisor)
 
                 * made balena-root-ca service a dependency of confd.service
               footer:
@@ -1477,9 +1490,9 @@
     - subject: Add ability to configure registry as a Hub proxy
       hash: 7b3fa83258afa8f824678294b5258b5684e6f25d
       body: >
-        To enable proxying of Docker Hub, set `REGISTRY2_PROXY_ENABLED` to `true`.
-        This will cache public images pulled through this instance. To access
-        private images, also set `REGISTRY2_PROXY_USERNAME` and
+        To enable proxying of Docker Hub, set `REGISTRY2_PROXY_ENABLED` to
+        `true`. This will cache public images pulled through this instance. To
+        access private images, also set `REGISTRY2_PROXY_USERNAME` and
         `REGISTRY2_PROXY_PASSWORD` to appropriate values.
 
 
@@ -2040,7 +2053,8 @@
             - subject: Add a base image without systemd
               hash: d7e44872d9594b9ef0557f78b8f38c6e449bbe54
               body: >
-                Also configures circleCI to publish no-systemd variant in parallel.
+                Also configures circleCI to publish no-systemd variant in
+                parallel.
               footer:
                 Change-type: minor
                 change-type: minor
@@ -2115,8 +2129,8 @@
     - subject: "service: Fix confd template for using S3 storage"
       hash: d1bf60052729ecd705c9c0f96a5460c9d0c5acdf
       body: >
-        - the `exists` condition doesn't work for an ENV backend, so just check it
-        has a value
+        - the `exists` condition doesn't work for an ENV backend, so just check
+        it has a value
 
         - the registry service MUST start after the base' balena-root-ca service has completed, otherwise
           it may not trust the certificate used by the S3 endpoint.
@@ -2243,8 +2257,8 @@
     - subject: Add ability to configure the S3 endpoint
       hash: 1eaee4a121b37e9f7957e5b9cdca068b6d5c3534
       body: >
-        This is useful when deploying against an S3-like service for storage, eg.
-        Minio.
+        This is useful when deploying against an S3-like service for storage,
+        eg. Minio.
       footer:
         Change-type: minor
         change-type: minor
@@ -2715,8 +2729,8 @@
 - commits:
     - author: Akis Kesoglou
       body: >-
-        This update includes a security fix for CVE-2017-11468. Release notes from
-        github/docker/distribution for this version:
+        This update includes a security fix for CVE-2017-11468. Release notes
+        from github/docker/distribution for this version:
 
         This release is a special security release to address an issue allowing an attacker to force arbitrarily-sized memory allocations in a registry instance through the manifest endpoint. The problem has been mitigated by limiting the size of reads for image manifest content.
       footers:
