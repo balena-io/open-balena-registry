@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update registry to 2.8.2
+      hash: a1a6d3546739c55cc2154f4c65b52d92e9bcac45
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested: []
+  version: 2.39.3
+  title: ""
+  date: 2023-07-11T10:24:11.996Z
+- commits:
     - subject: Update open-balena-base to 15.0.0
       hash: 1ca15154bed03f2f01e8e475c023efcc590c9fdf
       body: |
