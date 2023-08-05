@@ -55,7 +55,6 @@ storage:
 {{if getenv "REGISTRY2_S3_REGION_ENDPOINT"}}
     regionendpoint: {{getenv "REGISTRY2_S3_REGION_ENDPOINT"}}
 {{end}}
-{{if getenv "REGISTRY2_S3_DUALSTACK"}}
 {{if eq (getenv "REGISTRY2_S3_DUALSTACK" "false") "true"}}
     usedualstack: true
 {{end}}
