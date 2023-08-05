@@ -1,4 +1,15 @@
 - commits:
+    - subject: Conditionally enable S3 dualstack endpoints
+      hash: 4b7bc74280231b861a9b1331468a9f792cbf69f4
+      body: ""
+      footer:
+        change-type: patch
+      author: Anton Belodedenko
+      nested: []
+  version: 2.39.7
+  title: ""
+  date: 2023-08-05T18:02:46.315Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v15.0.3
       hash: c7b513a597bb65306cdd91cc072f0546345d4829
       body: |
