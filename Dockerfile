@@ -9,7 +9,7 @@ ARG TARGETARCH
 ARG GH_RUN_ID=5794478637
 
 RUN --mount=type=secret,id=GITHUB_TOKEN \
-    && GH_TOKEN=$(cat < /run/secrets/GITHUB_TOKEN) gh run download -R distribution/distribution "${GH_RUN_ID}" -n registry \
+    GH_TOKEN=$(cat < /run/secrets/GITHUB_TOKEN) gh run download -R distribution/distribution "${GH_RUN_ID}" -n registry \
     && find . -type f -name "*_${TARGETOS}_${TARGETARCH}.tar.gz" | xargs tar -zxvf \
     && ./registry --version
 
