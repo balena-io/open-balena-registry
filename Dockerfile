@@ -1,4 +1,4 @@
-FROM alpine:latest AS build
+FROM alpine:3.18.3 AS build
 
 RUN apk add --no-cache github-cli
 
