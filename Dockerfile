@@ -5,7 +5,8 @@ RUN apk add --no-cache github-cli
 ARG TARGETOS
 ARG TARGETARCH
 
-# https://github.com/distribution/distribution/actions/runs/5794478637
+# https://github.com/distribution/distribution/actions/workflows/build.yml?query=branch%3Amain
+# (e.g.) https://github.com/distribution/distribution/actions/runs/5794478637
 ARG GH_RUN_ID=5794478637
 
 RUN --mount=type=secret,id=GITHUB_TOKEN \
