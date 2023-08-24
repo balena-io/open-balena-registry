@@ -1,6 +1,5 @@
 FROM balena/open-balena-base:v15.1.0
 
-
 EXPOSE 80
 EXPOSE 81
 
