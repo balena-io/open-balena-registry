@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update open-balena-base to 16.0.0
+      hash: cac3fc536918271154a8a6b2bc1316fccb3f4e0c
+      body: |
+        Update open-balena-base from 15.1.1 to 16.0.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested:
+        - commits:
+            - subject: Update nodejs to 20.6.1 and npm to 10.1.0
+              hash: 7de3033a0fdbfe7942718532a105321d532541d6
+              body: ""
+              footer:
+                Change-type: major
+                change-type: major
+              author: Pagan Gazzard
+              nested: []
+          version: open-balena-base-16.0.0
+          title: ""
+          date: 2023-09-11T10:26:55.870Z
+  version: 2.39.13
+  title: ""
+  date: 2023-09-11T11:01:49.112Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v15.1.1
       hash: 0ae6bb2615ca9198e186e5a40b7630b18f843514
       body: |
