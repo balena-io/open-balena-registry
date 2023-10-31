@@ -1,4 +1,4 @@
-FROM balena/open-balena-base:v16.0.10
+FROM balena/open-balena-base:v16.0.11
 
 EXPOSE 80
 EXPOSE 81
