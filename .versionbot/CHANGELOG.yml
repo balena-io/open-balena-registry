@@ -1,4 +1,15 @@
 - commits:
+    - subject: update docker/distribution to v2.8.3
+      hash: 5ea06a3f4a941062c2e7af985f3a1c6b8eff1122
+      body: ""
+      footer:
+        change-type: patch
+      author: Anton Belodedenko
+      nested: []
+  version: 2.39.27
+  title: ""
+  date: 2023-11-12T22:39:14.985Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v16.0.13
       hash: c6875c3e57006213cfe5b740107a99551156424d
       body: |
