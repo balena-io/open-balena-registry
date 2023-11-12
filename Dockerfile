@@ -10,9 +10,9 @@ RUN apt-get update \
 		redis-server \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV REGISTRY_VERSION 2.8.2
-ENV REGISTRY_SHA256_amd64 b68ffb849bcdb49639dc91ba97baba6618346f95fedc0fcc94871b31d515d205
-ENV REGISTRY_SHA256_arm64 3d500cf4f7f21ade4bdfef28012aef8e1ec2b221d2d8d36d201d94dda84fa727
+ENV REGISTRY_VERSION 2.8.3
+ENV REGISTRY_SHA256_amd64 b1f750ecbe09f38e2143e22c61a25e3da2afe1510d9522859230b480e642ceff
+ENV REGISTRY_SHA256_arm64 7d2252eeeac97dd60fb9b36bebd15b95d7f947c4c82b8e0824cb55233ece9cd0
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
