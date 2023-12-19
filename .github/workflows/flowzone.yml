@@ -1,5 +1,4 @@
 name: Flowzone
-
 on:
   pull_request:
     types: [opened, synchronize, closed]
@@ -8,7 +7,6 @@ on:
   pull_request_target:
     types: [opened, synchronize, closed]
     branches: [main, master]
-
 jobs:
   flowzone:
     name: Flowzone
@@ -21,6 +19,3 @@ jobs:
     secrets: inherit
     with:
       docker_images: balena/open-balena-registry
-      repo_config: true
-      repo_description: "Docker image storage backend for openBalena"
-      repo_homepage: "balena.io/open"
