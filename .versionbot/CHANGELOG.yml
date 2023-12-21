@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v17
+      hash: 5b82facba38fdab146b89ba177b12a8d605b177d
+      body: |
+        Update balena/open-balena-base from 16.0.18 to 17.0.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 2.39.34
+  title: ""
+  date: 2023-12-21T13:02:40.858Z
+- commits:
     - subject: Remove repo config from flowzone.yml
       hash: 14dcaee2b4eb91faac3ff5dbbb6233fc4494b122
       body: |
