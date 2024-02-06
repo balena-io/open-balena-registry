@@ -59,7 +59,7 @@ storage:
     usedualstack: true
 {{end}}
     bucket: {{getenv "REGISTRY2_S3_BUCKET"}}
-    encrypt: false
+    encrypt: {{getenv "REGISTRY2_S3_ENCRYPT" "false"}}
     secure: true
     v4auth: true
     rootdirectory: {{getenv "REGISTRY2_STORAGEPATH"}}
