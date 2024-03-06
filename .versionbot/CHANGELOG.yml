@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v17.0.9
+      hash: 8aac012c874d6bbcea07fc9d126c336cc04960b5
+      body: |
+        Update balena/open-balena-base from 17.0.8 to 17.0.9
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 2.39.44
+  title: ""
+  date: 2024-03-06T19:58:08.810Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v17.0.8
       hash: db2d35f3b6f0ba3f57efb9885e674138f99e10dd
       body: |
@@ -1652,18 +1665,24 @@
                 + allows balenaMachine(s)/BoB(s) to automatically configure
                 itself (without bob-cli)
 
-                + auto-configuration requires balena-ca and cert-manager to do the heavy lifting prior
+                + auto-configuration requires balena-ca and cert-manager to do
+                the heavy lifting prior
 
-                + corresponding [balena-on-balena PR](https://github.com/balena-io/balena-on-balena/pull/261)
+                + corresponding [balena-on-balena
+                PR](https://github.com/balena-io/balena-on-balena/pull/261)
 
 
-                * refactor confd.service to include both root-ca and host-envvars handling
+                * refactor confd.service to include both root-ca and
+                host-envvars handling
 
-                * add systemd path watcher to restart confd if keys/certs change during runtime
+                * add systemd path watcher to restart confd if keys/certs change
+                during runtime
 
-                * store stack configuration available to all services in a persistent/shared volume (/balena)
+                * store stack configuration available to all services in a
+                persistent/shared volume (/balena)
 
-                * change resolver order to dns => mdns (ipv4) => mdns (ipv6) => return
+                * change resolver order to dns => mdns (ipv4) => mdns (ipv6) =>
+                return
 
                 * configure API key and JOSE/JWT key id
 
@@ -1940,7 +1959,8 @@
               body: >
                 * TOKEN_AUTH_REALM => REGISTRY2_TOKEN_AUTH_REALM
 
-                * REGISTRY2_TOKEN_AUTH_REALM is the new name for BALENA_TOKEN_AUTH_REALM
+                * REGISTRY2_TOKEN_AUTH_REALM is the new name for
+                BALENA_TOKEN_AUTH_REALM
               footer:
                 Change-type: patch
                 change-type: patch
@@ -2178,10 +2198,15 @@
         `REGISTRY2_PROXY_PASSWORD` to appropriate values.
 
 
-        Storage will highly likely be `filesystem`. To configure it specify `REGISTRY2_STORAGEPATH` to a directory into the registry container. Make sure to mount a volume at that path. Also ensure `REGISTRY2_S3_BUCKET` is *unset*, since its presence causes the instance to use S3 for storage.
+        Storage will highly likely be `filesystem`. To configure it specify
+        `REGISTRY2_STORAGEPATH` to a directory into the registry container. Make
+        sure to mount a volume at that path. Also ensure `REGISTRY2_S3_BUCKET`
+        is *unset*, since its presence causes the instance to use S3 for
+        storage.
 
 
-        The only other required env var is `BALENA_REGISTRY2_HOST` which must be set to the host name the instance will listen to.
+        The only other required env var is `BALENA_REGISTRY2_HOST` which must be
+        set to the host name the instance will listen to.
       footer:
         Change-type: minor
         change-type: minor
@@ -2814,7 +2839,8 @@
         - the `exists` condition doesn't work for an ENV backend, so just check
         it has a value
 
-        - the registry service MUST start after the base' balena-root-ca service has completed, otherwise
+        - the registry service MUST start after the base' balena-root-ca service
+        has completed, otherwise
           it may not trust the certificate used by the S3 endpoint.
       footer:
         Change-type: patch
@@ -3380,9 +3406,13 @@
         Revert commit 4159eb592be due to nginx.conf already specifying a
         client_max_body_size that conflicts with the newly specified one.
 
-        In fact, client_max_body_size is set to `0`, disabling any limits, therefore preventing the registry from responding with 413 when a client tries to upload large layers.
+        In fact, client_max_body_size is set to `0`, disabling any limits,
+        therefore preventing the registry from responding with 413 when a client
+        tries to upload large layers.
 
-        This needs further investigation to determine how Docker behaves with various registry settings, but in the meantime this needs to be reverted.
+        This needs further investigation to determine how Docker behaves with
+        various registry settings, but in the meantime this needs to be
+        reverted.
       footers:
         change-type: patch
         connects-to: "#8"
@@ -3414,7 +3444,10 @@
         This update includes a security fix for CVE-2017-11468. Release notes
         from github/docker/distribution for this version:
 
-        This release is a special security release to address an issue allowing an attacker to force arbitrarily-sized memory allocations in a registry instance through the manifest endpoint. The problem has been mitigated by limiting the size of reads for image manifest content.
+        This release is a special security release to address an issue allowing
+        an attacker to force arbitrarily-sized memory allocations in a registry
+        instance through the manifest endpoint. The problem has been mitigated
+        by limiting the size of reads for image manifest content.
       footers:
         change-type: minor
         connects-to: "#26"
