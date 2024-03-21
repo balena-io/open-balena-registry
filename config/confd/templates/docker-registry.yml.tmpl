@@ -63,6 +63,7 @@ storage:
     secure: true
     v4auth: true
     rootdirectory: {{getenv "REGISTRY2_STORAGEPATH"}}
+    chunksize: 104857600
 {{else}}
   filesystem:
     rootdirectory: {{getenv "REGISTRY2_STORAGEPATH"}}
