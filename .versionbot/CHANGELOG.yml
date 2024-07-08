@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v18.0.5
+      hash: fab3bd8a11e1e679d04e76f45aea9976d9509a37
+      body: |
+        Update balena/open-balena-base from 18.0.4 to 18.0.5
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 2.39.61
+  title: ""
+  date: 2024-07-08T20:00:14.787Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v18.0.4
       hash: ebf008e82ec1022bb52e08f0e4d00a942ce6fe47
       body: |
