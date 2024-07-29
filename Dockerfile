@@ -1,13 +1,9 @@
 FROM balena/open-balena-base:v18.0.8
 
-EXPOSE 80
-EXPOSE 81
-
 # hadolint ignore=DL3008
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
 		musl \
-		redis-server \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV REGISTRY_VERSION 2.8.3
