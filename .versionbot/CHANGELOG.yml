@@ -1,4 +1,16 @@
 - commits:
+    - subject: Remove unused logentries configs
+      hash: 511e6a99374be49663089c9cfdfe585e04d36cd8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested: []
+  version: 2.39.65
+  title: ""
+  date: 2024-07-29T12:49:35.971Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v18.0.8
       hash: 1d4693a280c61f49845f98d9acbf7a95202fdba2
       body: |
