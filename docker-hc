@@ -4,8 +4,7 @@ set -a
 
 [[ -f /etc/docker.env ]] && source /etc/docker.env
 
-(systemctl is-active balena-registry \
-  && curl -I --fail localhost) || exit $?
+curl -I --fail localhost || exit $?
 
 if [[ -s ${NODE_EXTRA_CA_CERTS} ]]; then
     true | openssl s_client \
