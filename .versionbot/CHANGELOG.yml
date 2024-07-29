@@ -1,4 +1,16 @@
 - commits:
+    - subject: Enable configuring more s3 backend options via env vars
+      hash: 1c130c35f04cb4af11128179ae0120ecdfab980b
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Pagan Gazzard
+      nested: []
+  version: 2.40.0
+  title: ""
+  date: 2024-07-29T13:04:57.308Z
+- commits:
     - subject: Remove unused logentries configs
       hash: 511e6a99374be49663089c9cfdfe585e04d36cd8
       body: ""
