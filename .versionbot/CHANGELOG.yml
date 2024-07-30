@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix nested changelog for open-balena-base updates
+      hash: 9c75d4919b5fd4df36c668c55054597cbf05c9da
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested: []
+  version: 2.40.1
+  title: ""
+  date: 2024-07-30T03:53:53.021Z
+- commits:
     - subject: Enable configuring more s3 backend options via env vars
       hash: 1c130c35f04cb4af11128179ae0120ecdfab980b
       body: ""
