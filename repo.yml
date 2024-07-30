@@ -1,4 +1,4 @@
 type: 'docker'
 upstream:
-  - repo: 'open-balena-base'
+  - repo: 'balena/open-balena-base'
     url: 'https://github.com/balena-io-modules/open-balena-base'
