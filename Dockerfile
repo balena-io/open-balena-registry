@@ -1,14 +1,4 @@
-FROM balena/open-balena-base:v18.0.8
-
-EXPOSE 80
-EXPOSE 81
-
-# hadolint ignore=DL3008
-RUN apt-get update \
-	&& apt-get install -y --no-install-recommends \
-		musl \
-		redis-server \
-	&& rm -rf /var/lib/apt/lists/*
+FROM balena/open-balena-base:v18.0.8-no-systemd
 
 ENV REGISTRY_VERSION 2.8.3
 ENV REGISTRY_SHA256_amd64 b1f750ecbe09f38e2143e22c61a25e3da2afe1510d9522859230b480e642ceff
@@ -24,8 +14,8 @@ RUN asset="registry_${REGISTRY_VERSION}_linux_$(dpkg --print-architecture).tar.g
 	mv registry /usr/local/bin/docker-registry && \
 	rm "${asset}"
 
-COPY config/services/ /etc/systemd/system/
-
 COPY . /usr/src/app
 
-RUN systemctl enable balena-registry.service
+# The ENTRYPOINT inherited from open-balena-base:no-systemd is "/usr/bin/confd-entry.sh"
+# so we need to pass our own entrypoint as the CMD
+CMD [ "/usr/src/app/entry.sh" ]

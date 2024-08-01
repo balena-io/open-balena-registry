@@ -19,3 +19,8 @@ jobs:
     secrets: inherit
     with:
       docker_images: balena/open-balena-registry
+      docker_runs_on: >
+        {
+          "linux/amd64": ["self-hosted","X64"],
+          "linux/arm64": ["self-hosted","ARM64"]
+        }

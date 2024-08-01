@@ -1,0 +1,42 @@
+
+services:
+
+  # Run a simple registry pull-through cache for testing
+  registry:
+    image: sut
+    environment:
+      REGISTRY2_PROXY_ENABLED: true
+    tmpfs:
+      - /data:exec
+
+  docker:
+    image: docker:27.1.1-dind
+    privileged: true
+    environment:
+      DOCKER_TLS_CERTDIR: ""
+    command: --insecure-registry=registry:80 --registry-mirror=http://registry:80 --tls=false --debug
+    depends_on:
+      - registry
+    tmpfs:
+      - /var/lib/docker:exec
+
+  sut:
+    image: docker:27.1.1
+    environment:
+      DOCKER_HOST: tcp://docker:2375
+    entrypoint:
+      - /bin/sh
+      - -c
+    command:
+      - |
+        apk add --no-cache curl
+        count=1
+        while ! docker info 2>/dev/null && [ "$${count}" -le 10 ]; do
+          sleep 1
+          count=$$((count + 1))
+        done
+        docker run --rm hello-world
+        curl -v http://registry:80/v2/_catalog | grep hello-world
+    depends_on:
+      - docker
+      - registry
