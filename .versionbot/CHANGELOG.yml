@@ -1,4 +1,48 @@
 - commits:
+    - subject: Remove musl dependency as the requirement was removed in 2.7.0
+      hash: 2cb2e437a00cd4cec8ad612128e72c76d70c23c1
+      body: >
+        We added musl in commit e0daae8d99d8028d679fca983731838a2c4dff1e as
+
+        it was required by registry 2.5.0.
+
+
+        In registry 2.7.0 they enabled CGO_ENABLED=0 via commit
+
+        https://github.com/distribution/distribution/commit/8a800e1292c159acc84c024ee2668241b3fe6168
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+    - subject: Switch to no-systemd variant of open-balena-base
+      hash: d08541f1211d7b88177e317f35fed7383c38c286
+      body: |
+        This cointainer only runs a single service and running
+        systemd requires a lot of overhead and extra permissions.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+    - subject: Remove unused redis service and config
+      hash: fabafc5c3fbe3546e536063f1d2e1c7f36faa600
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.41.0
+  title: ""
+  date: 2024-08-01T15:35:48.151Z
+- commits:
     - subject: Fix nested changelog for open-balena-base updates
       hash: 9c75d4919b5fd4df36c668c55054597cbf05c9da
       body: ""
