@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker Docker tag to v27.1.2
+      hash: 055550e23306185d64c2766e8c5617e5cf61d2b6
+      body: |
+        Update docker from 27.1.1 to 27.1.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 2.41.3
+  title: ""
+  date: 2024-08-22T18:00:48.230Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v18.0.11
       hash: 602e82e1b09791f76f3fc15bcabd89317657ccd7
       body: |
