@@ -1,4 +1,4 @@
-FROM balena/open-balena-base:v18.0.13-no-systemd
+FROM balena/open-balena-base:v18.0.14-no-systemd
 
 ENV REGISTRY_VERSION 2.8.3
 ENV REGISTRY_SHA256_amd64 b1f750ecbe09f38e2143e22c61a25e3da2afe1510d9522859230b480e642ceff
