@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v18.0.19
+      hash: a619e6a2eaacc0a6406f0a6dd8bd0777f25b2881
+      body: |
+        Update balena/open-balena-base from 18.0.18 to 18.0.19
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update dependency npm to v10.9.1
+              hash: ecc560e2b4745929bf03f6e2fee199dd68a7d0fd
+              body: |
+                Update npm from 10.9.0 to 10.9.1
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Self-hosted Renovate Bot
+              nested: []
+          version: open-balena-base-18.0.19
+          title: ""
+          date: 2024-11-21T22:54:55.391Z
+  version: 2.41.14
+  title: ""
+  date: 2024-11-22T00:02:08.791Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v18.0.18
       hash: 6bf1c26b3e899216bab99b15260c1d6b71ca39a6
       body: |
@@ -302,14 +328,11 @@
 - commits:
     - subject: Remove musl dependency as the requirement was removed in 2.7.0
       hash: 2cb2e437a00cd4cec8ad612128e72c76d70c23c1
-      body: >
+      body: |
         We added musl in commit e0daae8d99d8028d679fca983731838a2c4dff1e as
-
         it was required by registry 2.5.0.
 
-
         In registry 2.7.0 they enabled CGO_ENABLED=0 via commit
-
         https://github.com/distribution/distribution/commit/8a800e1292c159acc84c024ee2668241b3fe6168
       footer:
         Change-type: patch
@@ -4065,11 +4088,8 @@
   version: 1.5.2
 - commits:
     - author: Pablo Carranza Velez
-      body: >-
-        Idea taken from
-        https://medium.com/urban-massage-product/nginx-with-docker-easier-said-than-done-d1b5815d00d0
-        after noticing a user pushing a big layer
-
+      body: |-
+        Idea taken from https://medium.com/urban-massage-product/nginx-with-docker-easier-said-than-done-d1b5815d00d0 after noticing a user pushing a big layer
         causing out of space errors writing to /var/cache/nginx.
       footers:
         change-type: patch
