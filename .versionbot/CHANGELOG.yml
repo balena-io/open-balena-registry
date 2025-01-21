@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v18.0.24
+      hash: b9cdfc5e18d9077582223a4235c1b359438f7173
+      body: |
+        Update balena/open-balena-base from 18.0.23 to 18.0.24
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update dependency node to v22.13.1
+              hash: d416eb085be9aed927909588dcc1fd0f4c98a8a1
+              body: |
+                Update node from 22.13.0 to 22.13.1
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Self-hosted Renovate Bot
+              nested: []
+          version: open-balena-base-18.0.24
+          title: ""
+          date: 2025-01-21T17:59:32.376Z
+  version: 2.41.20
+  title: ""
+  date: 2025-01-21T18:57:16.446Z
+- commits:
     - subject: Update docker Docker tag to v27.5.0
       hash: 8acd2b71c2abda342cf47377484606ad57ff5297
       body: |
