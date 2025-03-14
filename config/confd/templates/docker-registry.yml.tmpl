@@ -47,6 +47,8 @@ storage:
     uploadpurging:
       enabled: false
 {{end}}
+
+# https://github.com/distribution/distribution/blob/main/docs/content/storage-drivers/s3.md#parameters
 {{if getenv "REGISTRY2_S3_BUCKET"}}
   s3:
     accesskey: {{getenv "REGISTRY2_S3_KEY"}}
@@ -63,6 +65,8 @@ storage:
     secure: true
     v4auth: true
     rootdirectory: {{getenv "REGISTRY2_STORAGEPATH"}}
+    {{if getenv "REGISTRY2_S3_ACCELERATE"}}accelerate: {{getenv "REGISTRY2_S3_ACCELERATE"}}{{end}}
+    {{if getenv "REGISTRY2_S3_FORCEPATHSTYLE"}}forcepathstyle: {{getenv "REGISTRY2_S3_FORCEPATHSTYLE"}}{{end}}
     {{if getenv "REGISTRY2_S3_CHUNK_SIZE"}}chunksize: {{getenv "REGISTRY2_S3_CHUNK_SIZE"}}{{end}}
     {{if getenv "REGISTRY2_S3_MULTIPART_COPY_CHUNKSIZE"}}multipartcopychunksize: {{getenv "REGISTRY2_S3_MULTIPART_COPY_CHUNKSIZE"}}{{end}}
     {{if getenv "REGISTRY2_S3_MULTIPART_COPY_MAX_CONCURRENCY"}}multipartcopymaxconcurrency: {{getenv "REGISTRY2_S3_MULTIPART_COPY_MAX_CONCURRENCY"}}{{end}}
