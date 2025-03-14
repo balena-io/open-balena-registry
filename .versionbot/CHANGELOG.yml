@@ -1,4 +1,14 @@
 - commits:
+    - subject: "patch: Allow configuration of S3 transfer acceleration"
+      hash: 0953171058b7bd653aeabc0c45d456c7489eeca9
+      body: ""
+      footer: {}
+      author: Anton Belodedenko
+      nested: []
+  version: 2.41.25
+  title: ""
+  date: 2025-03-14T16:35:12.993Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v18.0.27
       hash: 828ccf4900f83a5203f954c7d9909cf4e679642e
       body: |
