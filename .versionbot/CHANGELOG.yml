@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker Docker tag to v28
+      hash: 746d0b3c8a042fa5b77c2e64457de041c601833c
+      body: |
+        Update docker from 27.5.1 to 28.0.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 2.41.26
+  title: ""
+  date: 2025-03-25T16:28:51.761Z
+- commits:
     - subject: "patch: Allow configuration of S3 transfer acceleration"
       hash: 0953171058b7bd653aeabc0c45d456c7489eeca9
       body: ""
