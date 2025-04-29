@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add the ability to specify s3 storage class
+      hash: 72d4d1b33880a805152633e688d5992121426bc8
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Pagan Gazzard
+      nested: []
+  version: 2.42.0
+  title: ""
+  date: 2025-04-29T13:45:48.396Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v18.0.29
       hash: 04a8d6bdaa44c3ff54a948136caff4f390377989
       body: |
