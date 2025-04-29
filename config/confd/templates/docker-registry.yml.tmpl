@@ -71,6 +71,7 @@ storage:
     {{if getenv "REGISTRY2_S3_MULTIPART_COPY_CHUNKSIZE"}}multipartcopychunksize: {{getenv "REGISTRY2_S3_MULTIPART_COPY_CHUNKSIZE"}}{{end}}
     {{if getenv "REGISTRY2_S3_MULTIPART_COPY_MAX_CONCURRENCY"}}multipartcopymaxconcurrency: {{getenv "REGISTRY2_S3_MULTIPART_COPY_MAX_CONCURRENCY"}}{{end}}
     {{if getenv "REGISTRY2_S3_MULTIPART_COPY_THRESHOLD_SIZE"}}multipartcopythresholdsize: {{getenv "REGISTRY2_S3_MULTIPART_COPY_THRESHOLD_SIZE"}}{{end}}
+    {{if getenv "REGISTRY2_S3_STORAGE_CLASS"}}storageclass: {{getenv "REGISTRY2_S3_STORAGE_CLASS"}}{{end}}
 {{else}}
   filesystem:
     rootdirectory: {{getenv "REGISTRY2_STORAGEPATH"}}
