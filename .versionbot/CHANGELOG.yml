@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix v3 redis config
+      hash: 17165a1bfcbe9e7f211a62f3b0b3864c61eda625
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested: []
+  version: 3.0.1
+  title: ""
+  date: 2025-05-01T22:28:04.928Z
+- commits:
     - subject: Update registry to 3.0.0
       hash: 14798cf78e55d13d05181e8eb6e579a96a20cfdb
       body: ""
