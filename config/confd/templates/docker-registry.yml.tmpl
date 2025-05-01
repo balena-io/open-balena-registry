@@ -90,10 +90,9 @@ middleware:
 
 {{if eq (getenv "REGISTRY2_CACHE_ENABLED" "false") "true"}}
 redis:
-  addr: {{getenv "REGISTRY2_CACHE_ADDR" "127.0.0.1:6379"}}
+  addrs: [{{getenv "REGISTRY2_CACHE_ADDR" "127.0.0.1:6379"}}]
   db: {{getenv "REGISTRY2_CACHE_DB" "0"}}
-  pool:
-    maxidle: {{getenv "REGISTRY2_CACHE_MAX_IDLE" "256"}}
-    maxactive: {{getenv "REGISTRY2_CACHE_MAX_ACTIVE" "1024"}}
-    idletimeout: {{getenv "REGISTRY2_CACHE_IDLE_TIMEOUT" "300s"}}
+  maxidleconns: {{getenv "REGISTRY2_CACHE_MAX_IDLE" "256"}}
+  poolsize: {{getenv "REGISTRY2_CACHE_MAX_ACTIVE" "1024"}}
+  connmaxidletime: {{getenv "REGISTRY2_CACHE_IDLE_TIMEOUT" "300s"}}
 {{end}}
