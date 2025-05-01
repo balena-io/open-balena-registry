@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update registry to 3.0.0
+      hash: 14798cf78e55d13d05181e8eb6e579a96a20cfdb
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Pagan Gazzard
+      nested: []
+  version: 3.0.0
+  title: ""
+  date: 2025-05-01T20:03:48.438Z
+- commits:
     - subject: Add the ability to specify s3 storage class
       hash: 72d4d1b33880a805152633e688d5992121426bc8
       body: ""
