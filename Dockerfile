@@ -17,6 +17,10 @@ RUN asset="registry_${REGISTRY_VERSION}_linux_$(dpkg --print-architecture).tar.g
 
 COPY . /usr/src/app
 
+WORKDIR /usr/src/app/jwks
+RUN JOBS=max npm i
+WORKDIR /
+
 # The ENTRYPOINT inherited from open-balena-base:no-systemd is "/usr/bin/confd-entry.sh"
 # so we need to pass our own entrypoint as the CMD
 CMD [ "/usr/src/app/entry.sh" ]
