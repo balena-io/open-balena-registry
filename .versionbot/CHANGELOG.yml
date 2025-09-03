@@ -1,4 +1,35 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v19.2.0
+      hash: 6b7af030d7a18394d2f46024f593b6294880acd9
+      body: |
+        Update balena/open-balena-base from 19.1.5 to 19.2.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Install eget in the runtime image for convenience
+              hash: bda3c47838cfcfc63316f60b34fd14d36a10b57c
+              body: >
+                Downstream components can use open-balena-base in build stages
+
+                to install packages with eget rather than installing eget from
+                source.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: open-balena-base-19.2.0
+          title: ""
+          date: 2025-09-03T14:15:57.893Z
+  version: 3.0.28
+  title: ""
+  date: 2025-09-03T15:09:16.215Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v19.1.5
       hash: 940089c1fa290cc7c09b193c7ec7dda2775c54d1
       body: |
