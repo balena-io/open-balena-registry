@@ -1,4 +1,52 @@
 - commits:
+    - subject: Update balena/open-balena-base to v20.0.0
+      hash: 8c6ee16c7aec03bf8a2d53596942e69fb5e9feef
+      body: |
+        Update balena/open-balena-base from 19.2.1 to 20.0.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+      nested:
+        - commits:
+            - subject: Rename no-systemd variant to no-init for clarity
+              hash: f988174713d723624b5d1a455a899b1de4ff8c3d
+              body: |
+                This is a breaking change and consumers of this variant will
+                need to point to the new compatibility tag to get new releases.
+              footer:
+                Change-type: major
+                change-type: major
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Upgrade to debian trixie
+              hash: 8f937b6b16109cda217637860ea819015173cd6f
+              body: ""
+              footer:
+                Change-type: major
+                change-type: major
+              author: Pagan Gazzard
+              nested: []
+            - subject: Disable publishing of systemd variant
+              hash: 36c1ec3482356ccad7b5c0407ac72fcc2fbbc8cb
+              body: |
+                Going forward we will only be using s6 and no-init variants.
+              footer:
+                Change-type: major
+                change-type: major
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: open-balena-base-20.0.0
+          title: ""
+          date: 2025-09-04T14:21:54.921Z
+  version: 3.0.31
+  title: ""
+  date: 2025-09-04T19:40:46.808Z
+- commits:
     - subject: Update docker Docker tag to v28.4.0
       hash: e0e823f6fd5d686fae4e38fcebc36e4442c2064c
       body: |
