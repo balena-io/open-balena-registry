@@ -1,4 +1,16 @@
 - commits:
+    - subject: Use JWKS for token auth
+      hash: 072702bafb5e83571ee131888a59c826341f55c4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+      nested: []
+  version: 3.0.43
+  title: ""
+  date: 2025-10-24T04:21:56.790Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v20.2.0
       hash: f0dab7d3866bc2a64b60ed25d5f56c9b4e3a0572
       body: |
