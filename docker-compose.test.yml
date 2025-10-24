@@ -6,6 +6,7 @@ services:
     image: sut
     environment:
       REGISTRY2_PROXY_ENABLED: true
+      API_TOKENAUTH_JWKS: ewogICJrZXlzIjogWwogICAgewogICAgICAia3R5IjogIkVDIiwKICAgICAgIngiOiAieC1kdW1teS12YWx1ZSIsCiAgICAgICJ5IjogInktZHVtbXktdmFsdWUiLAogICAgICAiY3J2IjogIlAtMjU2IiwKICAgICAgInVzZSI6ICJzaWciLAogICAgICAiYWxnIjogIkVTMjU2IiwKICAgICAgImtpZCI6ICJraWQtZHVtbXktdmFsdWUiLAogICAgICAieDV0IjogIng1dC1kdW1teS12YWx1ZSIKICAgIH0KICBdCn0=
     tmpfs:
       - /data:exec
 
