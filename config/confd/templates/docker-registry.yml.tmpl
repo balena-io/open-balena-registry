@@ -39,10 +39,8 @@ storage:
   cache:
     blobdescriptor: redis
 {{end}}
-{{if eq (getenv "REGISTRY2_PROXY_ENABLED" "false") "true"}}
   delete:
     enabled: true
-{{end}}
 {{if eq (getenv "REGISTRY2_DISABLE_UPLOAD_PURGING" "false") "true"}}
   maintenance:
     uploadpurging:
