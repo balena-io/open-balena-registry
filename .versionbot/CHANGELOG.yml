@@ -1,4 +1,16 @@
 - commits:
+    - subject: Always enable delete endpoint
+      hash: baeb4ede62ddf38f6232075941ff884a93abee9e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+      nested: []
+  version: 3.0.45
+  title: ""
+  date: 2025-10-30T08:54:58.642Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v20.2.1
       hash: f86c93305c4b2439c28dc97cbf9e1e018925154a
       body: |
