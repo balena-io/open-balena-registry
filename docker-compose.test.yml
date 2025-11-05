@@ -11,7 +11,7 @@ services:
       - /data:exec
 
   docker:
-    image: docker:28.5.1-dind
+    image: docker:28.5.2-dind
     privileged: true
     environment:
       DOCKER_TLS_CERTDIR: ""
@@ -22,7 +22,7 @@ services:
       - /var/lib/docker:exec
 
   sut:
-    image: docker:28.5.1
+    image: docker:28.5.2
     environment:
       DOCKER_HOST: tcp://docker:2375
     entrypoint:
