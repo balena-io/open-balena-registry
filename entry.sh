@@ -3,7 +3,7 @@
 echo "${TOKEN_AUTH_ROOTCERTBUNDLE}" | base64 --decode >"${CERT_FILE}"
 
 # Prepare the registry JWKS file
-jwks_cert_file="/certs/private/${TOKEN_AUTH_CERT_ISSUER}.jwks.json"
+jwks_cert_file="/certs/private/${REGISTRY2_TOKEN_AUTH_ISSUER}.jwks.json"
 registry_jwks_file="/tmp/registry-jwks.json"
 if [ -f "${jwks_cert_file}" ]; then
     ln -s "${jwks_cert_file}" "${registry_jwks_file}"
