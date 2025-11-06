@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker Docker tag to v28.5.2
+      hash: 8a1761c76eaf63f465983ca511f8aca0cf5dec1d
+      body: |
+        Update docker from 28.5.1 to 28.5.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 3.0.46
+  title: ""
+  date: 2025-11-06T08:30:36.341Z
+- commits:
     - subject: Always enable delete endpoint
       hash: baeb4ede62ddf38f6232075941ff884a93abee9e
       body: ""
