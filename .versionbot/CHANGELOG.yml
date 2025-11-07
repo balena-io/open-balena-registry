@@ -1,4 +1,31 @@
 - commits:
+    - subject: "patch: Use correct env-var name for token auth"
+      hash: 5cf7cf2e9619570d89ea51ae16183d6c5161515b
+      body: |-
+        > REGISTRY2_TOKEN_AUTH_ISSUER == TOKEN_AUTH_CERT_ISSUER
+
+        .. however
+
+        `REGISTRY2_TOKEN_AUTH_ISSUER` is used by `registry`:
+
+        * https://github.com/balena-io/open-balena-registry/blob/master/config/confd/templates/docker-registry.yml.tmpl#L28
+
+        * https://github.com/balena-io/open-balena/blob/master/docker-compose.yml#L123
+
+        .. and 
+
+        `TOKEN_AUTH_CERT_ISSUER` is used by `open-balena-api`:
+
+        * https://github.com/balena-io/open-balena-api/blob/master/config/confd/templates/env.tmpl#L102
+
+        * https://github.com/balena-io/open-balena/blob/master/docker-compose.yml#L91
+      footer: {}
+      author: Anton Belodedenko
+      nested: []
+  version: 3.0.47
+  title: ""
+  date: 2025-11-07T00:33:19.992Z
+- commits:
     - subject: Update docker Docker tag to v28.5.2
       hash: 8a1761c76eaf63f465983ca511f8aca0cf5dec1d
       body: |
