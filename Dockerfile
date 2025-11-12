@@ -1,4 +1,4 @@
-FROM balena/open-balena-base:20.2.1-no-init
+FROM balena/open-balena-base:20.2.2-no-init
 
 ARG REGISTRY_VERSION=3.0.0
 ARG REGISTRY_SHA256_amd64=61c9a2c0d5981a78482025b6b69728521fbc78506d68b223d4a2eb825de5ca3d
