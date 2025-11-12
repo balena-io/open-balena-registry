@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v20.2.2
+      hash: e4f05f24a9a72f80969d27a7332570ac0e303ea9
+      body: |
+        Update balena/open-balena-base from 20.2.1 to 20.2.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update Node.js to v24.11.1
+              hash: d0910640d5288bff9419fc4a0fb54d87ad376bcf
+              body: |
+                Update node from 24.11.0 to 24.11.1
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: open-balena-base-20.2.2
+          title: ""
+          date: 2025-11-11T23:04:53.514Z
+  version: 3.0.48
+  title: ""
+  date: 2025-11-12T00:07:26.514Z
+- commits:
     - subject: "patch: Use correct env-var name for token auth"
       hash: 5cf7cf2e9619570d89ea51ae16183d6c5161515b
       body: |-
