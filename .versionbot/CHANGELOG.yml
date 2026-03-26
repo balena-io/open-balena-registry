@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update product-os/flowzone digest to 8ea01d3
+      hash: 1df82f20044804f7fa1e0f95c1c90685c06f23c4
+      body: |
+        Update product-os/flowzone
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 3.0.72
+  title: ""
+  date: 2026-03-26T12:32:01.180Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v21.0.10
       hash: bb1ff3469afe4c0be2753e1fdcf210fdf546d6b3
       body: |
