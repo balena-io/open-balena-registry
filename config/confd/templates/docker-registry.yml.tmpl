@@ -20,14 +20,6 @@ proxy:
   remoteurl: {{getenv "REGISTRY2_PROXY_REMOTE_URL" "https://registry-1.docker.io"}}
   username: {{getenv "REGISTRY2_PROXY_USERNAME"}}
   password: {{getenv "REGISTRY2_PROXY_PASSWORD"}}
-{{else}}
-auth:
-  token:
-    service: {{getenv "REGISTRY2_HOST"}}
-    realm: {{getenv "REGISTRY2_TOKEN_AUTH_REALM"}}
-    issuer: {{getenv "REGISTRY2_TOKEN_AUTH_ISSUER"}}
-    rootcertbundle: /tmp/registry-tokenauth.crt
-    jwks: /tmp/registry-jwks.json
 {{end}}
 
 storage:
