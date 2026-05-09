@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v21.0.16
+      hash: 97543487a4a0b8c7b1a5b740732baa0a173c8ac1
+      body: |
+        Update balena/open-balena-base from 21.0.15 to 21.0.16
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update dependency just-containers/s6-overlay to v3.2.3.0
+              hash: bc01af916911e6aaeb6f115adb0edabb295481ff
+              body: |
+                Update just-containers/s6-overlay from 3.2.2.0 to 3.2.3.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: open-balena-base-21.0.16
+          title: ""
+          date: 2026-05-09T15:37:18.283Z
+  version: 3.0.83
+  title: ""
+  date: 2026-05-09T16:18:22.013Z
+- commits:
     - subject: Update docker Docker tag to v29.4.3
       hash: 4e32a0833e1ecc5f9917a3e703b969097b355dc7
       body: |
