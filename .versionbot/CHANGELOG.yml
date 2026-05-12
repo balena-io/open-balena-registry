@@ -1,4 +1,17 @@
 - commits:
+    - subject: Pin docker Docker tag to 685b91d
+      hash: 6d6cfa5f87e2b0aa858cb1fe28bc6db5db424614
+      body: |
+        Update docker
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 3.0.86
+  title: ""
+  date: 2026-05-12T19:11:48.619Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v21.0.18
       hash: 776775fc97b9737bf34059829170a8f8b8ae2b43
       body: |
