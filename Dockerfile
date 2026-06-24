@@ -1,4 +1,4 @@
-FROM balena/open-balena-base:21.0.26-no-init@sha256:1a0b2ee6ad43ba3dcffe06bab6e1afb402d9ddffbe9740a18250fadbe7111040
+FROM balena/open-balena-base:21.0.27-no-init@sha256:c7cef3d638fe62a7f9c698eda5627aeb47965e7b7978daa88d88791d535e73aa
 
 ARG REGISTRY_VERSION=3.0.0
 ARG REGISTRY_SHA256_amd64=61c9a2c0d5981a78482025b6b69728521fbc78506d68b223d4a2eb825de5ca3d
