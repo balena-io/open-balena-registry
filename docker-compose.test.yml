@@ -11,7 +11,7 @@ services:
       - /data:exec
 
   docker:
-    image: docker:29.7.0-dind@sha256:084e385b0c9b7ab35d5a46dfedd033721448c000dbec71adcf13da8a9e71baa8
+    image: docker:29.7.1-dind@sha256:dab286577468bcb55d834faea4fe7b3bef5a4f10aaf9927305971761b9ba9e20
     privileged: true
     environment:
       DOCKER_TLS_CERTDIR: ""
@@ -22,7 +22,7 @@ services:
       - /var/lib/docker:exec
 
   sut:
-    image: docker:29.7.0@sha256:084e385b0c9b7ab35d5a46dfedd033721448c000dbec71adcf13da8a9e71baa8
+    image: docker:29.7.1@sha256:dab286577468bcb55d834faea4fe7b3bef5a4f10aaf9927305971761b9ba9e20
     environment:
       DOCKER_HOST: tcp://docker:2375
     entrypoint:
