@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker:29.7.2 Docker digest to 3ef33f2
+      hash: f20d70397f8da956d3e0222b161c48f35b426503
+      body: |
+        Update docker
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 3.0.121
+  title: ""
+  date: 2026-09-01T00:19:38.168Z
+- commits:
     - subject: Update docker:29.7.2-dind Docker digest to 3ef33f2
       hash: 9ea3df03a88ca1c516411b905f9ac1bfc8adcdff
       body: |
