@@ -41,10 +41,16 @@ storage:
 {{end}}
   delete:
     enabled: true
-{{if eq (getenv "REGISTRY2_DISABLE_UPLOAD_PURGING" "false") "true"}}
+{{if or (eq (getenv "REGISTRY2_DISABLE_UPLOAD_PURGING" "false") "true") (eq (getenv "REGISTRY2_READ_ONLY_ENABLED" "false") "true")}}
   maintenance:
+{{if eq (getenv "REGISTRY2_DISABLE_UPLOAD_PURGING" "false") "true"}}
     uploadpurging:
       enabled: false
+{{end}}
+{{if eq (getenv "REGISTRY2_READ_ONLY_ENABLED" "false") "true"}}
+    readonly:
+      enabled: true
+{{end}}
 {{end}}
 
 # https://github.com/distribution/distribution/blob/main/docs/content/storage-drivers/s3.md#parameters
