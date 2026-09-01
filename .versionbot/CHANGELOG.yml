@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add support for enabling readonly mode
+      hash: c7a17994c7f2d41beb73863ab749ac019725454e
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: joshbwlng
+      nested: []
+  version: 3.1.0
+  title: ""
+  date: 2026-09-01T02:02:34.545Z
+- commits:
     - subject: Update docker:29.7.2 Docker digest to 3ef33f2
       hash: f20d70397f8da956d3e0222b161c48f35b426503
       body: |
