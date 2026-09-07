@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker Docker tag to v29.8.0
+      hash: 025747f5d2ddad8737df3e3819e8977e7b34389e
+      body: |
+        Update docker from 29.7.2 to 29.8.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 3.1.1
+  title: ""
+  date: 2026-09-07T13:39:51.550Z
+- commits:
     - subject: Add support for enabling readonly mode
       hash: c7a17994c7f2d41beb73863ab749ac019725454e
       body: ""
