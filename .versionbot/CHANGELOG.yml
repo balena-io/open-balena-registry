@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker:29.8.2-dind Docker digest to 1e08cdb
+      hash: 1bc73b8629ce74531aaa4911504b61de2a5c6e6d
+      body: |
+        Update docker
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 3.1.13
+  title: ""
+  date: 2026-10-08T06:14:29.205Z
+- commits:
     - subject: Update docker:29.8.2 Docker digest to 1e08cdb
       hash: 7ec43d63d3d6f141d7dae9c2820866ea5e4e9c41
       body: |
