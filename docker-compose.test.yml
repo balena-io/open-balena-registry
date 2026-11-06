@@ -22,7 +22,7 @@ services:
       - /var/lib/docker:exec
 
   sut:
-    image: docker:29.9.3@sha256:4495bd03abbe729dae065ecc187801a19820fd19159948f01d68a57a8d281bd0
+    image: docker:29.9.3@sha256:08a98015fce594af7c382883bea080ea206de74402a95da9dc52b6428c8cd121
     environment:
       DOCKER_HOST: tcp://docker:2375
     entrypoint:
