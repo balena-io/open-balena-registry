@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker:29.9.3 Docker digest to 08a9801
+      hash: 769692bba0915454b63b3ba9c1a4c5ec95503f31
+      body: |
+        Update docker
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 3.1.30
+  title: ""
+  date: 2026-11-06T01:57:49.791Z
+- commits:
     - subject: Update docker:29.9.3 Docker digest to 4495bd0
       hash: 2d11603595b5fce44426df25a0dadd9a7c064364
       body: |
