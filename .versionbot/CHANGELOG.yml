@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker:29.9.3-dind Docker digest to 7bf70dc
+      hash: fd38e348cd6accfb5d469d9e97890fe4dd530b31
+      body: |
+        Update docker
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 3.1.33
+  title: ""
+  date: 2026-11-13T06:16:19.736Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v22.1.4
       hash: 867f8f07f9937540e73e3e4b0e828e88c686f1ec
       body: |
