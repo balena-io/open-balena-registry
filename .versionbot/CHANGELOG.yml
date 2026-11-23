@@ -1,4 +1,43 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v22.2.0
+      hash: e78c03d9e5870c18bd16a0078bcc8779e58fffe5
+      body: |
+        Update balena/open-balena-base from 22.1.4 to 22.2.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Generate the token-auth key ID from the API certificate
+              hash: 33030e7504907ecd0d21c3aba312148bf5a486a5
+              body: >
+                configure-balena.sh now derives the libtrust key ID (KID) from
+
+                api.${TLD}.pem (public key only) and sets TOKEN_AUTH_CERT_KID
+                and
+
+                REGISTRY_TOKEN_AUTH_CERT_KID, but only when those env vars are
+                not
+
+                already set and no api.${TLD}.kid file is provided. This removes
+                the
+
+                need to derive the KID from the certificate manually.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Carlo Miguel F. Cruz <carloc@balena.io>
+                signed-off-by: Carlo Miguel F. Cruz <carloc@balena.io>
+              author: Carlo Miguel F. Cruz
+              nested: []
+          version: open-balena-base-22.2.0
+          title: ""
+          date: 2026-11-23T16:39:25.211Z
+  version: 3.1.36
+  title: ""
+  date: 2026-11-23T17:23:31.543Z
+- commits:
     - subject: Update docker Docker tag to v29.10.0
       hash: 258facfdf669d78e490c72f5dadf43ad9ad945b6
       body: |
