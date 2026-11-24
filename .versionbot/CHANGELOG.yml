@@ -1,4 +1,60 @@
 - commits:
+    - subject: Update balena/open-balena-base Docker tag to v22.2.2
+      hash: 8961bb30688411b639e2b40fed7fd725a9201410
+      body: |
+        Update balena/open-balena-base from 22.2.0 to 22.2.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update dependency zyedidia/eget to v1.3.4
+              hash: 5331139570c1434feec7e6fcac03ae2219bc0b39
+              body: |
+                Update zyedidia/eget from 1.3.3 to 1.3.4
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: open-balena-base-22.2.2
+          title: ""
+          date: 2026-11-23T23:06:12.357Z
+        - commits:
+            - subject: Install eget with go install at a pinned version
+              hash: 57859b4c38055b418a08bcceeb7739511aa87620
+              body: >
+                The eget-build stages cloned the repo and checked out a mutable
+                tag.
+
+                Install it with `go install` instead, so the go command verifies
+                the
+
+                module zip against sum.golang.org and the content of the version
+                cannot
+
+                change under us even if upstream moves the tag.
+
+
+                Set main.Version with ldflags, since the v1.3.3 tag reports
+                1.3.2+src,
+
+                and add a Renovate annotation for EGET_VERSION.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: open-balena-base-22.2.1
+          title: ""
+          date: 2026-11-23T22:22:38.077Z
+  version: 3.1.37
+  title: ""
+  date: 2026-11-24T01:13:02.903Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v22.2.0
       hash: e78c03d9e5870c18bd16a0078bcc8779e58fffe5
       body: |
