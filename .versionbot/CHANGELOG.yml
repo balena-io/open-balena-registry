@@ -1,4 +1,41 @@
 - commits:
+    - subject: Generate the registry JWKS from the API certificate
+      hash: 8f0573735841e85fbfa63157ca04f877af0ed0ab
+      body: >
+        When no JWKS file and no API_TOKENAUTH_JWKS are provided, entry.sh now
+
+        generates the JWKS from the API certificate (API_TOKENAUTH_CRT) using
+        the
+
+        key ID that open-balena-base derives (REGISTRY_TOKEN_AUTH_CERT_KID).
+
+
+        jwks.js reads only the certificate, never the private key, and supports
+
+        RSA keys (RS256, RS384, RS512, PS256, PS384, PS512) and EC keys on
+
+        P-256, P-384 and P-521 (ES256, ES384, ES512). The algorithm defaults
+        from
+
+        the key type and can be set with TOKEN_AUTH_JWT_ALGO to match the one
+
+        open-balena-api signs tokens with.
+
+
+        The compose test now mounts a test certificate instead of a dummy
+
+        API_TOKENAUTH_JWKS, so it exercises the generation path.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Carlo Miguel F. Cruz <carloc@balena.io>
+        signed-off-by: Carlo Miguel F. Cruz <carloc@balena.io>
+      author: Carlo Miguel F. Cruz
+      nested: []
+  version: 3.2.0
+  title: ""
+  date: 2026-11-24T15:17:41.245Z
+- commits:
     - subject: Update balena/open-balena-base Docker tag to v22.2.3
       hash: 655d7b0580cb9639d095076f2f9ab0ef87113a59
       body: |
