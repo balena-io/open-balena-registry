@@ -9,6 +9,18 @@ if [ -f "${jwks_cert_file}" ]; then
     ln -s "${jwks_cert_file}" "${registry_jwks_file}"
 elif [ -n "${API_TOKENAUTH_JWKS}" ]; then
     echo "${API_TOKENAUTH_JWKS}" | base64 --decode >"${registry_jwks_file}"
+elif [ -s "${CERT_FILE}" ]; then
+    # Generate the JWKS from the API certificate. The key ID is derived by
+    # open-balena-base (configure-balena.sh) and exported base64 encoded.
+    jwks_kid="$(echo "${REGISTRY_TOKEN_AUTH_CERT_KID:-${TOKEN_AUTH_CERT_KID}}" | base64 --decode)"
+    if [ -z "${jwks_kid}" ]; then
+        echo "Error: no token auth key ID to generate the registry JWKS with." >&2
+        exit 1
+    fi
+    if ! node /usr/src/app/jwks.js "${CERT_FILE}" "${jwks_kid}" ${TOKEN_AUTH_JWT_ALGO:+"${TOKEN_AUTH_JWT_ALGO}"} >"${registry_jwks_file}"; then
+        echo "Error: failed to generate the registry JWKS." >&2
+        exit 1
+    fi
 fi
 
 # Ensure the registry JWKS file exists and is valid JSON
