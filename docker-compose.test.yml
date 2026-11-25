@@ -14,7 +14,7 @@ services:
       - /data:exec
 
   docker:
-    image: docker:29.10.1-dind@sha256:5d24ae532c4b32bea8fc5714ec34a7db838c9f668d18b6c772b2415196a2cd83
+    image: docker:29.10.1-dind@sha256:fbbc96e0af32cdc190aff92ba97a1281a115351a723afe21af78879cc55126b0
     privileged: true
     environment:
       DOCKER_TLS_CERTDIR: ""
