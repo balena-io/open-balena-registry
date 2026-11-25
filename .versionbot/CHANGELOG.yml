@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker:29.10.1 Docker digest to fbbc96e
+      hash: 1fc2541a8c50f7209ff4c8504885a700e456a2f9
+      body: |
+        Update docker
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 3.2.3
+  title: ""
+  date: 2026-11-25T12:37:32.589Z
+- commits:
     - subject: Update docker:29.10.1-dind Docker digest to fbbc96e
       hash: c6e4e2922c814243b6a37872fdd0fde48090037f
       body: |
