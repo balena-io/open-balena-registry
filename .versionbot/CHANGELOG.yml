@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker Docker tag to v29.10.1
+      hash: 647a9e6ca5f83b2689a0565107b259188cef530e
+      body: |
+        Update docker from 29.10.0 to 29.10.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 3.2.1
+  title: ""
+  date: 2026-11-25T02:14:12.613Z
+- commits:
     - subject: Generate the registry JWKS from the API certificate
       hash: 8f0573735841e85fbfa63157ca04f877af0ed0ab
       body: >
